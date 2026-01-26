@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-title:  "Banana Bread"
+title:  "椰子鸡"
 image: banana-bread.jpg
 imagecredit: https://flic.kr/p/7HZmzn
 
