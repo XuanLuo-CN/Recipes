@@ -2,23 +2,11 @@
 
 layout: recipe
 title:  "椰子鸡"
-image: banana-bread.jpg
+image: Coconut_chicken.jpg
 imagecredit: https://flic.kr/p/7HZmzn
 
 tags:
-- breakfast
-- baking
-
-ingredients:
-- 4 bananas
-- 1/2 cup butter
-- 1/2 cup sugar
-- 2 eggs
-- 2 cups flour
-- 1/2 tsp baking soda
-- 1 tsp baking powder
-- pinch salt
-- 1/4 cup nuts (we like pecans)
+- Meat
 
 directions:
 - Beat the eggs, then cream with the butter and sugar
@@ -28,4 +16,4 @@ directions:
 
 ---
 
-From Angie's mom
+椰子水 1L, 鸡半只，红枣一颗，白萝卜，椰子块（可选）
