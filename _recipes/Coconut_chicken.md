@@ -9,10 +9,10 @@ tags:
 - Meat
 
 directions:
-- Beat the eggs, then cream with the butter and sugar
-- Mix in bananas, then flour, baking soda/powder, salt, and nuts
-- Add to greased and floured pan
-- Bake until brown/cracked, toothpick comes out clean
+- 鸡肉斩开，泡血水2h
+- 白萝卜切片焯水5min，取出
+- 椰子水中加入红枣，白萝卜，一茶勺盐，煮开
+- 加入鸡肉煮十分钟，撇去浮沫后完成
 
 ---
 
