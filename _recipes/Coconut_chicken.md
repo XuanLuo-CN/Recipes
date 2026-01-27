@@ -14,6 +14,16 @@ directions:
 - 椰子水中加入红枣，白萝卜，一茶勺盐，煮开
 - 加入鸡肉煮十分钟，撇去浮沫后完成
 
+
+ingredients:
+- bean sprouts 
+- bacon (1pc per person)
+- green onions
+- 1 tsp fish sauce
+- 1 tbsp lime juice
+- salt/pepper/garlic
+- MSG
+- peanuts
 ---
 
 椰子水 1L, 鸡半只，红枣一颗，白萝卜，椰子块（可选）
