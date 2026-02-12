@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-title:  "Mapo tofu"
+title:  "麻婆豆腐"
 image: Mapo tofu.jpeg
 
 tags:
