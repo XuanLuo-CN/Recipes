@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: "Marry Me Chicken and Gnocchi Soup"
+title: "炒芥兰"
 image: marry-me-chicken-and-gnocchi-soup.jpg
 tags:
 - Dinner
