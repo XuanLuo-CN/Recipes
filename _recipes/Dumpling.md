@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "饺子"
-image: Dumpling.jpg
+image: Dumpling.png
 
 tags:
 - mains
