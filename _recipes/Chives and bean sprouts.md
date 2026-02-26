@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "韭菜炒豆芽"
-image: cranberry-lemon-bars.jpg
+image: Chives and bean sprouts.jpg
 
 tags:
 - veg
