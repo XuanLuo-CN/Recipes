@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "椰子鸡"
-image: Coconut_chicken.jpeg
+image: Coconut_chicken.png
 imagecredit: https://flic.kr/p/7HZmzn
 
 tags:
