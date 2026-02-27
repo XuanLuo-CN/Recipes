@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "韭菜炒豆芽"
-image: Chives and bean sprouts.png
+image: Chives_and bean_sprouts.png
 
 tags:
 - veg
