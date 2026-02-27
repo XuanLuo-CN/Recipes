@@ -2,7 +2,8 @@
 
 layout: recipe
 title:  "苦瓜酿肉"
-image: Stuffed Bitter Melon with Pork.jpg
+image: Bitter_melon_with_pork.png
+
 tags:
 - Meat
 
