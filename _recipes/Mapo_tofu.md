@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "麻婆豆腐"
-image: Mapo tofu.jpeg
+image: Mapo_tofu.png
 
 tags:
 - Meat
