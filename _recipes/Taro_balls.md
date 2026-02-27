@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "芋圆"
-image: Taro balls.jpeg
+image: Taro_balls.jpeg
 
 tags:
 - sweet
