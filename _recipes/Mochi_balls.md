@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "糯米小丸子"
-image: Mochi balls.jpg
+image: Mochi_balls.png
 
 tags:
 - sweet
