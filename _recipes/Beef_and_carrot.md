@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "萝卜牛腩"
-image: mississippi-pot-roast.jpg
+image: Beef_and_carrot.png
 imagecredit: https://www.today.com/today/amp/tdna199419
 
 tags:
