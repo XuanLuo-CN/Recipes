@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "沙茶牛肉粥"
-image: Beef porridge.jpg
+image: Beef_porridge.png
 
 tags:
 - mains
