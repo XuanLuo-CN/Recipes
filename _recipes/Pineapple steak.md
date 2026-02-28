@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "菠萝牛肉粒"
-image: Pineapple steak.jpeg
+image: Pineapple_steak.png
 
 tags:
 - Meat
