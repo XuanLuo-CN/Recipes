@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "椰冻"
-image: coconut jelly.jpg
+image: Coconut_jelly.jpg
 
 tags:
 - sweet
