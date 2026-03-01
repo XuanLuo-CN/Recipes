@@ -2,7 +2,7 @@
 
 layout: recipe
 title:  "苦瓜酸菜炒饭"
-image: mushroom-risotto.jpg
+image: Bitter_melon_rice.png
 
 tags:
 - mains
