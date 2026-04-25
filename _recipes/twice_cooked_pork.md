@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "回锅肉"
-image: Twice_cooked_pork.png
+image: twice_cooked_pork.png
 
 tags:
   
