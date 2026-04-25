@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-title:  "Beef_chow_fun"
+title:  "干炒牛河"
 image: Beef_chow_fun.png
 
 tags: 
