@@ -9,7 +9,7 @@ tags:
 - meat
 
 ingredients:
-- 
+- mantequilla de ajo
 ---
 
 龙虾
