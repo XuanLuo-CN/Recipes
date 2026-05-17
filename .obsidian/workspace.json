@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "d1d5c127b12f2cf4",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d90580faa4ce085",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3e76f972b1afd79",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "about.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "about"
+            }
+          },
+          {
+            "id": "c077b33c0ea354f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_recipes/korean_beaf_bbq.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "korean_beaf_bbq"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "53dc3451767e1c9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d55a2da784be7216",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e93263f6d7fdfa23",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "006f21d9db1da8aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c84ccd24df77a421",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5926f5fbdadff7aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2f550e2e83c580a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "269dc932708a8dc5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_recipes/korean_beaf_bbq.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for korean_beaf_bbq"
+            }
+          },
+          {
+            "id": "77bacf0d574f4720",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_recipes/korean_beaf_bbq.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from korean_beaf_bbq"
+            }
+          },
+          {
+            "id": "988687b8aa449530",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d82b30dcc3d76e29",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c367c5d216341fbb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_recipes/korean_beaf_bbq.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of korean_beaf_bbq"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "c077b33c0ea354f1",
+  "lastOpenFiles": [
+    "_recipes/lemon_chicken.md",
+    "_recipes/korean_beaf_bbq.md",
+    "_recipes/tofu_stew.md",
+    "_recipes/korean_pasta.md",
+    "_recipes/salt_grilled_mackerel.md",
+    "_recipes/three reds.md",
+    "_recipes/twice_cooked_pork.md",
+    "_recipes/Mochi_balls.md",
+    "_recipes/Pepper_beef_short_ribs.md",
+    "_recipes/Mapo_tofu.md",
+    "_recipes/Basil_rice.md",
+    "_recipes/vegi.md",
+    "_recipes/Beef_and_carrot.md",
+    "_recipes/Beef_porridge.md",
+    "_recipes/basil_beef.md",
+    "_recipes/mushroom_risotto.md",
+    "Commend.md",
+    "about.md",
+    "readme.md"
+  ]
+}
