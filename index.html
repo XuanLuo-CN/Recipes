@@ -5,39 +5,50 @@ layout: default
 <div class="content w-full md:w-4/5 h-full overflow-scroll">
   <div class="recipes mb-24 py-8">
     
-    <!-- 顶部区域：计数器与排序选项 -->
-    <div class="px-6 mb-8 mt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-      
-      <!-- 计数器 -->
-      <div class="flex items-center justify-center sm:justify-start space-x-3 bg-stone-50 border border-stone-200/80 rounded-2xl p-4 w-full sm:w-max shadow-sm">
-        <span class="total-badge">MENU</span>
-        <span class="text-stone-600 text-lg sm:text-xl font-medium">
-          Welcome! We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
-        </span>
-      </div>
+    <!-- 顶栏：一体化温馨欢迎与极简排序卡片 -->
+    <div class="px-6 mb-8 mt-2">
+      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl p-5 shadow-sm max-w-2xl">
+        
+        <!-- 第一行：欢迎区域 -->
+        <div class="flex items-center space-x-3">
+          <span class="total-badge">MENU</span>
+          <span class="text-stone-700 text-lg sm:text-xl font-medium">
+            Welcome to Xuan's Recipes! We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
+          </span>
+        </div>
 
-      <!-- 排序下拉选择框 -->
-      <div class="flex items-center justify-center sm:justify-end space-x-2">
-        <label for="sort-select" class="text-sm font-medium text-stone-500">Sort by:</label>
-        <select id="sort-select" class="bg-white border border-stone-300 text-stone-700 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 p-2 shadow-sm cursor-pointer outline-none">
-          <option value="recent">Latest Updated (最新发布)</option>
-          <option value="pinyin">Alphabetical A-Z (拼音排序)</option>
-        </select>
-      </div>
+        <!-- 两者之间好看的分割线 -->
+        <div class="border-t border-stone-200/60 my-4"></div>
 
+        <!-- 第二行：极简文本排序切换（字号整体变小） -->
+        <div class="flex items-center space-x-2 text-xs">
+          <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
+          <div class="flex items-center space-x-2 font-medium select-none">
+            <!-- 默认激活 Date：黑色且加粗 -->
+            <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer">
+              Date
+            </button>
+            <span class="text-stone-300">/</span>
+            <!-- 默认未激活 Alpha：灰色 -->
+            <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer">
+              Alpha
+            </button>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-      .total-badge { background: #F53200; color: white; font-size: 14px; padding: 4px 10px; border-radius: 6px; font-weight: bold; vertical-align: middle; }
-      .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 48px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 5px; vertical-align: sub; }
+      .total-badge { background: #F53200; color: white; font-size: 13px; padding: 3px 8px; border-radius: 6px; font-weight: bold; vertical-align: middle; }
+      .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 44px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 4px; vertical-align: sub; }
     </style>
 
-    <!-- 统一的全局菜谱网格（添加了 id="recipe-grid" 供 JS 识别） -->
+    <!-- 全局菜谱网格 -->
     <div id="recipe-grid" class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
-        <!-- 核心改变：添加了 data-date 和 data-title 用于前端动态排序 -->
         <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
              data-title="{{ post.title }}">
@@ -54,28 +65,39 @@ layout: default
   </div>
 </div>
 
-<!-- 控制动态排序的极简 JavaScript -->
+<!-- 处理纯文本标签切换的 JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const grid = document.getElementById('recipe-grid');
-    const select = document.getElementById('sort-select');
-    // 获取所有的菜谱卡片
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
+    
+    const btnRecent = document.getElementById('btn-sort-recent');
+    const btnPinyin = document.getElementById('btn-sort-pinyin');
 
-    select.addEventListener('change', function (e) {
-      const sortBy = e.target.value;
-
+    function updateSort(sortBy) {
       if (sortBy === 'recent') {
-        // 按照日期从新到老排序 (Latest Updated)
+        // 最近更新排序
         cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        
+        // 样式联动：Date 变黑粗，Alpha 变灰细
+        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
+        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       } else if (sortBy === 'pinyin') {
-        // 按照中文拼音首字母 A-Z 排序 (Alphabetical)
+        // 拼音 A-Z 排序
         cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
+        
+        // 样式联动：Alpha 变黑粗，Date 变灰细
+        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
+        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       }
 
-      // 清空原有网格并按新顺序重新插入卡片
+      // 清空原有 DOM 网格并按新顺序重新挂载卡片
       grid.innerHTML = '';
       cards.forEach(card => grid.appendChild(card));
-    });
+    }
+
+    // 绑定文本点击事件
+    btnRecent.addEventListener('click', () => updateSort('recent'));
+    btnPinyin.addEventListener('click', () => updateSort('pinyin'));
   });
 </script>
