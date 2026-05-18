@@ -5,7 +5,7 @@ title:  "麻婆豆腐"
 image: Mapo_tofu.png
 
 tags:
-- Meat
+- beaf
 
 ingredients:
 - 铁锅烧热，下入大量花椒，余温焙香

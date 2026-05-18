@@ -5,8 +5,7 @@ title: "泡椒牛肉"
 image: Beef_with_pickled_peppers.png
 
 tags:
-- sides
-- veg
+- beaf
 
 ingredients:
 - 1 bunch of okra

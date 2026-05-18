@@ -2,11 +2,11 @@
 
 layout: recipe
 title:  "打抛饭"
-image: Basil_rice.png
+image: basil_rice.png
 
 tags:
-- mains
-- meat
+- beaf
+- pork
 
 ingredients:
 - 起锅煸香蒜末小米辣

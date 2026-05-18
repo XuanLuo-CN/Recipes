@@ -4,7 +4,7 @@ title: "韭菜炒豆芽"
 image: Chives_and_bean_sprouts.png
 
 tags:
-- veg
+- vegi
   
 ingredients:
 - 韭菜根切三段 韭菜叶切三段，分开放置

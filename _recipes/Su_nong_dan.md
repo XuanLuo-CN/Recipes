@@ -4,7 +4,7 @@ title: 韩式牛肋骨
 image: Su_nong_dan.jpg
 
 tags:
-  - meat
+  - beaf
     
 directions:
   - 牛肋骨焯水，煎至两面上色

@@ -6,7 +6,7 @@ image: Coconut_chicken.png
 imagecredit: https://flic.kr/p/7HZmzn
 
 tags:
-- Meat
+- chicken
 
 ingredients:
 - 鸡肉斩开，泡血水2h

@@ -6,6 +6,8 @@ image: Dumpling.png
 
 tags:
 - mains
+- pork
+- beaf
 
 
 directions:

@@ -5,7 +5,7 @@ title:  "玫瑰豉油鸡"
 image: Soy_sauce_chicken.png
 
 tags:
-- Meat
+- chicken
 
 ingredients:
 - 鸡肉涂抹耗油、盐、玫瑰露腌制30min以上

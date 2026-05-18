@@ -5,7 +5,7 @@ title:  "芋圆"
 image: Taro_balls.png
 
 tags:
-- sweet
+- dessert
 
 directions:
 - 芋头与红薯切片蒸熟，压成泥

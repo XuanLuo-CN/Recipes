@@ -4,6 +4,8 @@ layout: recipe
 title:  "酸辣土豆丝"
 image: hot_and_sour_shredded_potatoes.png
 
+tag
+- vegi
 
 ingredients:
 - 土豆切丝，冲流水

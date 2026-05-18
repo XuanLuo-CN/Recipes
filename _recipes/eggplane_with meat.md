@@ -5,7 +5,8 @@ title: "肉末茄子"
 image: eggplane with meat.jpg
 
 tags: 
-- Meat
+- pork
+- beaf
   
 
 directions:

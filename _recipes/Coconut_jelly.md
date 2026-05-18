@@ -5,7 +5,7 @@ title:  "椰冻"
 image: Coconut_jelly.jpg
 
 tags:
-- sweet
+- dessert
 
 ingredients:
 - 芒果切丁

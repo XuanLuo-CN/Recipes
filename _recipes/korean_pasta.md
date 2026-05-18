@@ -3,7 +3,8 @@ layout: recipe
 title: 韩杏意面
 image: korean_pasta.png
 tags:
-  - mains
+  - Mains
+  - Vegi
   - Korean Food
 ingredients:
   - 杏鲍菇横切片并打上花刀，煎至两面上色，加入胡椒粉和一点黄油

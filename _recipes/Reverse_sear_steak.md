@@ -4,6 +4,9 @@ layout: recipe
 title:  "反向法牛排"
 image: Reverse_sear_steak.png
 
+tag
+- beaf
+
 directions:
 - 烤箱预热300°F
 - 牛肉表面抹上盐，放在架子上

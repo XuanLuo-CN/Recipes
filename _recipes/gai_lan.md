@@ -1,11 +1,9 @@
 ---
 layout: recipe
 title: "炒芥兰"
-image: marry-me-chicken-and-gnocchi-soup.jpg
+image: gai_lan.png
 tags:
-- Dinner
-- Lunch
-- Soup
+- vegi
 ingredients:
 - 芥兰洗净切段，
 - 起锅烧油，芥兰与少量开水同时进锅，加入盐和糖焯熟

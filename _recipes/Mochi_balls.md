@@ -5,7 +5,7 @@ title:  "糯米小丸子"
 image: Mochi_balls.png
 
 tags:
-- sweet
+- dessert
 
 ingredients:
 - 每60g糯米粉中加入50-60度的温水

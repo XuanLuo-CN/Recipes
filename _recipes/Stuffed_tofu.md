@@ -5,7 +5,8 @@ title:  "酿豆腐"
 image: Stuffed_tofu.png
 
 tags:
-- Meat
+- pork
+- beaf
 
 ingredients:
 - 肉末加入香菇末、胡椒粉、酱油和盐混合

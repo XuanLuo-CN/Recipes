@@ -3,7 +3,7 @@ layout: recipe
 title: 韩式烤牛肉
 image: korean_beaf_bbq.png
 tags:
-  - Beaf
+  - beaf
   - Korean Food
 ingredients:
   - 一个梨打碎挤出汁水

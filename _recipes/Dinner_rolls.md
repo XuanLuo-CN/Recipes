@@ -5,7 +5,7 @@ title:  "小餐包"
 image: Dinner_rolls.png
 
 tags:
-- desserts
+- dessert
 
 directions:
 - 200g高筋面粉加130g温牛奶，5g酵母，20g黄油，半个鸡蛋，15g糖，4g海盐

@@ -2,7 +2,10 @@
 layout: recipe
 title: "农家一碗香"
 image: farmhouse_bowl.png
-  
+
+tag
+- pork
+
 ingredients:
 - 螺丝椒去籽切片，小米辣斜切
 - 姜蒜切片，大葱切成花

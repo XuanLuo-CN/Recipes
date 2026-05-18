@@ -5,7 +5,7 @@ title:  "烤五花肉"
 image: grilled_pork_belly.png
 
 tags:
-- meat
+- pork
 
 ingredients:
 - 五花肉切片，加洋葱丝、小葱丝、姜碎和适量料酒去腥

@@ -5,11 +5,13 @@ title:  "老奶洋芋"
 image: oldma_potato.png
 imagecredit: https://flic.kr/p/8ANQTc
 
+tag
+- vegi
 
 directions:
 - 土豆切片蒸熟，捏碎（不要太碎）
 - 2个香菇压入水中泡软
-- 酸菜和香菇洗净切丁
+- 酸菜（可选：和香菇）洗净切丁
 - 起锅煎肉末
 - 爆香蒜末和干辣椒，炒熟酸菜
 - 加入土豆混合，加盐调味

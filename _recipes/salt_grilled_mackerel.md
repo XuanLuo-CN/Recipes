@@ -3,7 +3,7 @@ layout: recipe
 title: 盐烤青花鱼
 image: salt_grilled_mackerel.png
 tags:
-  - mains
+  - seafood
 ingredients:
   - 青花鱼去肚，沿三角区去头取肉，切掉腹部的鱼刺
   - 鱼肉擦干，去除黑色的膜，加盐和料酒或者清酒腌制，可加柠檬汁

@@ -4,7 +4,7 @@ title: "九层塔焖牛肉"
 image: Basil_beef.png
 
 tags:
-- Meat
+- beaf
   
 ingredients:
 - 每500g牛肉中加入一汤勺沙茶酱，一汤勺生抽，一汤勺老抽，适量胡椒粉腌制

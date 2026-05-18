@@ -5,7 +5,7 @@ title:  "菠萝牛肉粒"
 image: Pineapple_steak.png
 
 tags:
-- Meat
+- beaf
 
 ingredients:
 - 牛肉切块，撒盐和黑胡椒腌制10min

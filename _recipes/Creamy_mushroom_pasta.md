@@ -4,7 +4,7 @@ title: 奶油鸡肉蘑菇意面
 image: Creamy_mushroom_pasta.jpg
 
 tags:
-- mains
+- chicken
 
 directions:
 - 鸡肉切厚片，加入面粉、黑胡椒抓匀

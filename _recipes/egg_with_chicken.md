@@ -5,7 +5,7 @@ title:  "洋葱鸡肉滑蛋饭"
 image: egg_with_chicken.png
 
 tags:
-- meat
+- chicken
 
 ingredients:
 - 鸡肉腌制，加入酱油、鸡粉、耗油、胡椒粉、淀粉

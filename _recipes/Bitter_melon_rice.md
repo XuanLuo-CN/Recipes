@@ -5,7 +5,9 @@ title:  "苦瓜酸菜炒饭"
 image: Bitter_melon_rice.png
 
 tags:
-- mains
+- beaf
+- pork
+- main
 
 directions:
 - 苦瓜切薄片，加盐杀出涩水

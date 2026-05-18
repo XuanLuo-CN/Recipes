@@ -5,8 +5,7 @@ title: "江西辣排骨"
 image: Spicy_pork_ribs.png
 
 tags:
-- fancy
-- vegetarian
+- pork
 
 ingredients:
 - 排骨泡出血水

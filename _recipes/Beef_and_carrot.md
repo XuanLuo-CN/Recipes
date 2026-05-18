@@ -6,8 +6,7 @@ image: Beef_and_carrot.png
 imagecredit: https://www.today.com/today/amp/tdna199419
 
 tags:
-- mains
-- meat
+- beaf
 
 directions:
 - 牛腩切块焯水，捞出温水洗净

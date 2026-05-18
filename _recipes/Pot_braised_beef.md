@@ -5,7 +5,7 @@ title: "罐焖牛肉"
 image: Pot_braised_beef.jpg
 
 tags:
-- Meat
+- beaf
 
 directions:
 - 牛腩加西芹、胡萝卜、洋葱、盐、红酒、百里香、黑胡椒、香叶腌制

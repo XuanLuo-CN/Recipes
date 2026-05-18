@@ -5,8 +5,7 @@ title:  "干炒牛河"
 image: Beef_chow_fun.png
 
 tags: 
-- mains
-- meat
+- beaf
 
 ingredients:
 - 河粉泡开水泡软，沥干，逐根撕开

@@ -5,7 +5,7 @@ title: "牧羊人派"
 image: Shepherd's_pie.jpg
 
 tags:
-- mains
+- beaf
 
 directions:
 - 土豆切片蒸熟

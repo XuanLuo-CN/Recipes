@@ -3,7 +3,8 @@ layout: recipe
 title: 辣豆腐汤
 image: tofu_stew.png
 tags:
-  - mains
+  - pork
+  - beaf
 ingredients:
   - 牛肉或肉末或五花肉切片，或者猪肉末，香菇泡软
   - 起锅煸肉，加蒜泥大葱，三勺辣椒面

@@ -4,7 +4,7 @@ title: "葱爆羊肉"
 image: Lamb_with_scallions.png
 
 tags:
-- veg
+- lamb
   
 ingredients:
 - 葱切眉毛状

@@ -5,7 +5,7 @@ title:  "干锅鸡翅"
 image: jalapeno-cornbread.jpg
 
 tags:
-- Meat
+- chicken
 
 directions:
 - 鸡翅切开，腌制胡椒粉、耗油、盐、鸡粉、酱油、淀粉、香油

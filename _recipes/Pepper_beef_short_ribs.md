@@ -4,6 +4,8 @@ layout: recipe
 title:  "黑椒牛仔骨"
 image: Pepper_beef_short_ribs.jpg
 
+tag
+- beaf
 
 directions:
 - 牛仔骨加小苏打、盐、黑胡椒、白葡萄酒、淀粉腌制
