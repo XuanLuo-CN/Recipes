@@ -20,17 +20,17 @@ layout: default
         <!-- 两者之间好看的分割线 -->
         <div class="border-t border-stone-200/60 my-4"></div>
 
-        <!-- 第二行：极简文本排序切换（字号变小，靠右缩进对齐） -->
+        <!-- 第二行：极简文本排序切换（字号变小，靠右缩进对齐，选中项为红色） -->
         <div class="flex items-center justify-end text-xs space-x-2">
           <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
           <div class="flex items-center space-x-2 font-medium select-none">
-            <!-- 默认激活 Date：黑色且加粗 -->
-            <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer">
+            <!-- 默认激活 Date：变更为网页原生红色 text-primary -->
+            <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer">
               Date
             </button>
             <span class="text-stone-300">/</span>
-            <!-- 默认未激活 Alpha：灰色 -->
-            <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer">
+            <!-- 默认未激活 Alpha：保持灰色 -->
+            <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
               Alpha
             </button>
           </div>
@@ -50,14 +50,14 @@ layout: default
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
         
-        <!-- 💡 核心安全机制：自动识别并过滤掉 Chowdown 仓库自带的 6 个英文默认预设文件 -->
+        <!-- 安全机制：防止未彻底清理的特定模板路径干扰 -->
         {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
           {% continue %}
         {% endif %}
         
         <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
-             data-title="{{ post.title }}">
+             data-title="{{ post.title | escape }}">
           <a class="block" href="{{ post.url | prepend: site.baseurl }}">
             <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
                     {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
@@ -71,14 +71,15 @@ layout: default
   </div>
 </div>
 
-<!-- 处理纯文本标签切换与动态总数校正的 JavaScript -->
+<!-- 处理纯文本标签切换与颜色高亮的 JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const grid = document.getElementById('recipe-grid');
-    // 获取经过过滤器清洗后，真正属于你的菜谱卡片
+    if (!grid) return;
+
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
     
-    // 自动校正头部的 MENU 总数，剔除那 6 个隐藏预设的干扰
+    // 精准动态校正菜单菜品总数
     const numDisplay = document.querySelector('.handwritten-num');
     if (numDisplay) {
       numDisplay.textContent = cards.length;
@@ -89,16 +90,20 @@ layout: default
 
     function updateSort(sortBy) {
       if (sortBy === 'recent') {
-        cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
-        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
+        cards.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+        
+        // 样式红黑联动：Date 变为红色(text-primary)，Alpha 恢复灰色(text-stone-400)
+        btnRecent.className = "focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer";
+        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer";
       } else if (sortBy === 'pinyin') {
         cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
-        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
-        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
+        
+        // 样式红黑联动：Alpha 变为红色(text-primary)，Date 恢复灰色(text-stone-400)
+        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer";
+        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer";
       }
 
-      grid.innerHTML = '';
+      // 原地无损重排节点
       cards.forEach(card => grid.appendChild(card));
     }
 
