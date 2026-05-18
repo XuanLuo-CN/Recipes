@@ -2,74 +2,74 @@
 layout: default
 ---
 
-  <div class="content w-full md:w-4/5 h-full overflow-scroll">
-      
-      <div class="minimal-counter">
-        <span class="bg-number">{{ site.recipes | size }}</span>
-        <p class="front-text">RECIPES COLLECTED</p>
-      </div>
-      
-      <style>
-      .minimal-counter {
-        position: relative;
-        text-align: center;
-        height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-      .bg-number {
-        font-size: 100px;
-        font-weight: 900;
-        color: rgba(245, 50, 0, 0.08); /* 极淡的橙红色 */
-        position: absolute;
-        letter-spacing: -5px;
-        font-family: 'Arial Black', sans-serif;
-        z-index: 1;
-      }
-      .front-text {
-        position: relative;
-        z-index: 2;
-        font-size: 13px;
-        letter-spacing: 4px;
-        color: #333;
-        font-weight: 600;
-        margin: 0;
-      }
-      </style>
-          <h2 class="text-red-950 md:text-primary uppercase font-semibold mb-2 px-6">Most Recent</h2>
+  <div class="content w-full md:w-4/5 h-full overflow-scroll">
+      
+      <div class="recipes mb-24 py-8">
+        <div class="cafe-counter">
+  <span class="total-badge">MENU</span>
+  今天做点什么？已为主子备好 <span class="handwritten-num">{{ site.recipes | size }}</span> 道大餐。
+</div>
 
-          <div class="flex overflow-scroll md:overflow-visible snap-x md:grid px-6 md:h-full md:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
-            <!-- First 3 Recipes -->
-            {% assign first_recipes = site.recipes | sort:"date" %}
-            {% for post in first_recipes limit:3 %}
-              <a class="recipe w-3/4 md:w-auto flex-shrink-0 block snap-center md:hover:scale-105 md:hover:rotate-1 transition" href="{{ post.url | prepend: site.baseurl }}">
-                <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"{% for image in post.image %} style="background-image:url({{site.baseurl}}/images/{{ image }});"{% endfor %}>
-                </canvas>
-                <h1 class="font-semibold leading-tight text-2xl text-primary font-gelica md:text-base md:text-orange-950 md:font-inter pr-16 md:pr-0">{{ post.title }}</h1>
-              </a>
-            {% endfor %}
-          </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+.cafe-counter {
+  text-align: center;
+  font-size: 18px;
+  color: #4a4a4a;
+  padding: 25px 0;
+  border-bottom: 2px dashed #ddd;
+  margin-bottom: 20px;
+}
+.total-badge {
+  background: #F53200; /* 使用了你配置里的橙红色 */
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.handwritten-num {
+  font-family: 'Caveat', cursive, sans-serif; /* 引入手写艺术字 */
+  font-size: 42px;
+  color: #F53200;
+  font-weight: bold;
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(-5deg); /* 轻微倾斜增加灵动感 */
+  margin: 0 5px;
+}
+</style>
+          <h2 class="text-red-950 md:text-primary uppercase font-semibold mb-2 px-6">Most Recent</h2>
 
-
-          <div class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div class="flex overflow-scroll md:overflow-visible snap-x md:grid px-6 md:h-full md:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
+            <!-- First 3 Recipes -->
+            {% assign first_recipes = site.recipes | sort:"date" %}
+            {% for post in first_recipes limit:3 %}
+              <a class="recipe w-3/4 md:w-auto flex-shrink-0 block snap-center md:hover:scale-105 md:hover:rotate-1 transition" href="{{ post.url | prepend: site.baseurl }}">
+                <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"{% for image in post.image %} style="background-image:url({{site.baseurl}}/images/{{ image }});"{% endfor %}>
+                </canvas>
+                <h1 class="font-semibold leading-tight text-2xl text-primary font-gelica md:text-base md:text-orange-950 md:font-inter pr-16 md:pr-0">{{ post.title }}</h1>
+              </a>
+            {% endfor %}
+          </div>
 
 
-            {% assign sorted = site.recipes | sort:"date" %}
-              {% for post in sorted offset:3 %}
-                <a class="recipe md:hover:scale-105 md:hover:rotate-1 transition" href="{{ post.url | prepend: site.baseurl }}">
-                    <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"{% for image in post.image %} style="background-image:url({{site.baseurl}}/images/{{ image }});"{% endfor %}
-                    >
-                    </canvas>
-                    <h1 class="font-semibold leading-tight">{{ post.title }}</h1>
-                </a>
-            {% endfor %}
-               
-            
-          </div>
-      </div>
+          <div class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
 
-  </div>
 
+            {% assign sorted = site.recipes | sort:"date" %}
+              {% for post in sorted offset:3 %}
+                <a class="recipe md:hover:scale-105 md:hover:rotate-1 transition" href="{{ post.url | prepend: site.baseurl }}">
+                    <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"{% for image in post.image %} style="background-image:url({{site.baseurl}}/images/{{ image }});"{% endfor %}
+                    >
+                    </canvas>
+                    <h1 class="font-semibold leading-tight">{{ post.title }}</h1>
+                </a>
+            {% endfor %}
+               
+            
+          </div>
+      </div>
+
+  </div>
