@@ -106,8 +106,8 @@
 </head>
 
 <nav class="w-full md:w-1/4 lg:w-1/5 md:h-full bg-orange-50 fixed md:relative left-0 bottom-0 flex md:flex-col justify-between md:justify-start px-6 py-4 md:p-8 md:gap-4 z-10 shadow-3xl md:shadow-none {% if page.url contains '/recipes/' %}md:hidden{% endif %}">
-      <!-- Recipes 选项 -->
-      <a href="/" class="flex flex-col md:flex-row items-center gap-0 md:gap-2 {% if page.url == '/' %}text-primary{% endif %}">
+      <!-- Recipes 选项 --><!-- 仅仅是加了一个 id="nav-recipes" -->
+      <a href="/" id="nav-recipes" class="flex flex-col md:flex-row items-center gap-0 md:gap-2 {% if page.url == '/' %}text-primary{% endif %}">
         <svg class="w-12 md:w-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18 16.25H15V7.5H12V16.25H9V7.5H6V16.25C6 18.9 8.49 21.05 11.625 21.2125V32.5H15.375V21.2125C18.51 21.05 21 18.9 21 16.25V7.5H18V16.25ZM25.5 12.5V22.5H29.25V32.5H33V7.5C28.86 7.5 25.5 10.3 25.5 12.5Z" fill="currentColor" />
         </svg>
@@ -132,18 +132,31 @@
 </nav>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Select all links with the .coming-soon class
-      document.querySelectorAll('.coming-soon').forEach(link => {
-        link.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default link behavior
-
-          // Find the inner element with the .label class
-          const label = this.querySelector('.label');
-          if (label) {
-            label.textContent = 'Soon'; // Change the text content to "Soon"
+  document.addEventListener('DOMContentLoaded', () => {
+    const recipesLink = document.getElementById('nav-recipes');
+    
+    if (recipesLink) {
+      recipesLink.addEventListener('click', function(event) {
+        // 智能判断：检查用户当前是否已经身处主页
+        const isHomePage = window.location.pathname === '/' || 
+                           window.location.pathname === '{{ site.baseurl }}/' || 
+                           window.location.pathname === '{{ site.baseurl }}';
+                           
+        if (isHomePage) {
+          event.preventDefault(); // 拦截默认的页面刷新跳转
+          
+          // 找到真正负责滚动的 .content survey 容器
+          const contentContainer = document.querySelector('.content');
+          if (contentContainer) {
+            // 让容器丝滑地滚动回最顶端
+            contentContainer.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
           }
-        });
+        }
+        // 如果不在主页（比如在搜索页），则不拦截，正常执行 href="/" 跳转回主页
       });
-    });
-  </script>
+    }
+  });
+</script>
