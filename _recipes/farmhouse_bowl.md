@@ -3,7 +3,7 @@ layout: recipe
 title: "农家一碗香"
 image: farmhouse_bowl.png
 
-tag
+tags:
 - pork
 
 ingredients:
