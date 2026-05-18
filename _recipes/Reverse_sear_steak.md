@@ -4,7 +4,7 @@ layout: recipe
 title:  "反向法牛排"
 image: Reverse_sear_steak.png
 
-tag
+tags:
 - beaf
 
 directions:
@@ -15,4 +15,4 @@ directions:
 - 醒肉5min
 
 ---
-steak
+牛排

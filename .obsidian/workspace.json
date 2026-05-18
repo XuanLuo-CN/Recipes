@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/beef_porridge.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "beef_porridge"
-            }
-          },
-          {
-            "id": "c077b33c0ea354f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "about.md",
+                "file": "_recipes/su_nong_dan.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "su_nong_dan"
             }
           }
         ]
@@ -54,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTimeReverse",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -108,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/beef_porridge.md",
+                "file": "_recipes/su_nong_dan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for beef_porridge"
+              "title": "Backlinks for su_nong_dan"
             }
           },
           {
@@ -127,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/beef_porridge.md",
+                "file": "_recipes/su_nong_dan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from beef_porridge"
+              "title": "Outgoing links from su_nong_dan"
             }
           },
           {
@@ -170,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/beef_porridge.md",
+                "file": "_recipes/su_nong_dan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of beef_porridge"
+              "title": "Outline of su_nong_dan"
             }
           }
         ]
@@ -200,8 +186,18 @@
   },
   "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
-    "_recipes/seaweed_fried_rice.md",
+    "_recipes/reverse_sear_steak.md",
+    "_recipes/beef_with_negishio_sauce.md",
+    "_recipes/oldma_potato.md",
+    "_recipes/pepper_beef_short_ribs.md",
+    "_recipes/beef_and_carrot.md",
+    "_recipes/beef_chow_fun.md",
+    "_recipes/chives_and_bean_sprouts.md",
+    "_recipes/dinner_rolls.md",
+    "_recipes/coconut_chicken.md",
+    "_recipes/beef_with_pickled_peppers.md",
     "_recipes/beef_porridge.md",
+    "_recipes/seaweed_fried_rice.md",
     "about.md",
     "Commend.md",
     "_recipes/korean_beaf_bbq.md",
@@ -215,16 +211,6 @@
     "_recipes/tofu_stew.md",
     "_recipes/twice_cooked_pork.md",
     "_recipes/three_reds.md",
-    "_recipes/oldma_potato.md",
-    "_recipes/langosta_al_ajillo.md",
-    "_recipes/hot_and_sour_shredded_potatoes.md",
-    "_recipes/grilled_pork_belly.md",
-    "_recipes/fried_cabbage.md",
-    "_recipes/farmhouse_bowl.md",
-    "_recipes/eggplane_with meat.md",
-    "_recipes/egg_with_chicken.md",
-    "_recipes/dry_pot.md",
-    "_recipes/taro_balls.md",
-    "_recipes/basil_beef.md"
+    "_recipes/langosta_al_ajillo.md"
   ]
 }

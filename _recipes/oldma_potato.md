@@ -5,7 +5,7 @@ title:  "老奶洋芋"
 image: oldma_potato.png
 imagecredit: https://flic.kr/p/8ANQTc
 
-tag
+tags:
 - vegi
 
 directions:

@@ -4,7 +4,7 @@ layout: recipe
 title:  "黑椒牛仔骨"
 image: Pepper_beef_short_ribs.jpg
 
-tag
+tags:
 - beaf
 
 directions:
