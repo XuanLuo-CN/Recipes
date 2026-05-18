@@ -24,12 +24,10 @@ layout: default
         <div class="flex items-center justify-end text-xs space-x-2">
           <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
           <div class="flex items-center space-x-2 font-medium select-none">
-            <!-- 默认激活 Date：黑色且加粗 -->
             <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer">
               Date
             </button>
             <span class="text-stone-300">/</span>
-            <!-- 默认未激活 Alpha：灰色 -->
             <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer">
               Alpha
             </button>
@@ -50,14 +48,15 @@ layout: default
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
         
-        <!-- 💡 核心安全机制：自动识别并过滤掉 Chowdown 仓库自带的 6 个英文默认预设文件 -->
+        <!-- 安全机制：防止未彻底清理的特定模板路径干扰（保留作为双保险） -->
         {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
           {% continue %}
         {% endif %}
         
+        <!-- 💡 核心加固：使用 | escape 过滤器保护数据属性，防止特殊字符引发 JS 报错崩溃 -->
         <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
-             data-title="{{ post.title }}">
+             data-title="{{ post.title | escape }}">
           <a class="block" href="{{ post.url | prepend: site.baseurl }}">
             <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
                     {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
@@ -71,14 +70,15 @@ layout: default
   </div>
 </div>
 
-<!-- 处理纯文本标签切换与动态总数校正的 JavaScript -->
+<!-- 升级版：原地无损重排 JavaScript 脚本 -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const grid = document.getElementById('recipe-grid');
-    // 获取经过过滤器清洗后，真正属于你的菜谱卡片
+    if (!grid) return;
+
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
     
-    // 自动校正头部的 MENU 总数，剔除那 6 个隐藏预设的干扰
+    // 精准动态校正菜单菜品总数
     const numDisplay = document.querySelector('.handwritten-num');
     if (numDisplay) {
       numDisplay.textContent = cards.length;
@@ -89,16 +89,21 @@ layout: default
 
     function updateSort(sortBy) {
       if (sortBy === 'recent') {
-        cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        // 🚀 升级：利用工整的 YYYY-MM-DD 进行纯字符串高性能倒序比对，规避 NaN 乱序风险
+        cards.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+        
         btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
         btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       } else if (sortBy === 'pinyin') {
+        // 按照标准中文拼音 A-Z 顺序比对
         cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
+        
         btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
         btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       }
 
-      grid.innerHTML = '';
+      // 🚀 核心修复：移除 grid.innerHTML = '' 这一毁灭性清空动作！
+      // appendChild 会直接在宿主 DOM 树中平滑地搬移节点，完美保留 canvas 的图片和渲染状态
       cards.forEach(card => grid.appendChild(card));
     }
 
