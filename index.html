@@ -5,31 +5,77 @@ layout: default
 <div class="content w-full md:w-4/5 h-full overflow-scroll">
   <div class="recipes mb-24 py-8">
     
-    <!-- 英文放大版温馨计数器 -->
-    <div class="cafe-counter">
-      <span class="total-badge">MENU</span>
-      Welcome to Xuan's Recipes! We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
+    <!-- 顶部区域：计数器与排序选项 -->
+    <div class="px-6 mb-8 mt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      
+      <!-- 计数器 -->
+      <div class="flex items-center justify-center sm:justify-start space-x-3 bg-stone-50 border border-stone-200/80 rounded-2xl p-4 w-full sm:w-max shadow-sm">
+        <span class="total-badge">MENU</span>
+        <span class="text-stone-600 text-lg sm:text-xl font-medium">
+          Welcome! We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
+        </span>
+      </div>
+
+      <!-- 排序下拉选择框 -->
+      <div class="flex items-center justify-center sm:justify-end space-x-2">
+        <label for="sort-select" class="text-sm font-medium text-stone-500">Sort by:</label>
+        <select id="sort-select" class="bg-white border border-stone-300 text-stone-700 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 p-2 shadow-sm cursor-pointer outline-none">
+          <option value="recent">Latest Updated (最新发布)</option>
+          <option value="pinyin">Alphabetical A-Z (拼音排序)</option>
+        </select>
+      </div>
+
     </div>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-      .cafe-counter { text-align: center; font-size: 36px; color: #4a4a4a; padding: 40px 0; border-bottom: 2px dashed #ddd; margin-bottom: 30px; line-height: 1.4; }
-      .total-badge { background: #F53200; color: white; font-size: 20px; padding: 4px 10px; border-radius: 6px; font-weight: bold; margin-right: 10px; vertical-align: middle; }
-      .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 84px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 10px; vertical-align: sub; }
+      .total-badge { background: #F53200; color: white; font-size: 14px; padding: 4px 10px; border-radius: 6px; font-weight: bold; vertical-align: middle; }
+      .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 48px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 5px; vertical-align: sub; }
     </style>
 
-    <!-- 统一的全局菜谱网格（最新发布的菜排在最前） -->
-    <div class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+    <!-- 统一的全局菜谱网格（添加了 id="recipe-grid" 供 JS 识别） -->
+    <div id="recipe-grid" class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
-        <a class="recipe md:hover:scale-105 md:hover:rotate-1 transition" href="{{ post.url | prepend: site.baseurl }}">
-          <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
-                  {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
-          </canvas>
-          <h1 class="font-semibold leading-tight text-stone-800 mt-1">{{ post.title }}</h1>
-        </a>
+        <!-- 核心改变：添加了 data-date 和 data-title 用于前端动态排序 -->
+        <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
+             data-date="{{ post.date | date: '%Y-%m-%d' }}" 
+             data-title="{{ post.title }}">
+          <a class="block" href="{{ post.url | prepend: site.baseurl }}">
+            <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
+                    {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
+            </canvas>
+            <h1 class="font-semibold leading-tight text-stone-800 mt-1 text-base">{{ post.title }}</h1>
+          </a>
+        </div>
       {% endfor %}
     </div>
 
   </div>
 </div>
+
+<!-- 控制动态排序的极简 JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.getElementById('recipe-grid');
+    const select = document.getElementById('sort-select');
+    // 获取所有的菜谱卡片
+    const cards = Array.from(grid.getElementsByClassName('recipe-card'));
+
+    select.addEventListener('change', function (e) {
+      const sortBy = e.target.value;
+
+      if (sortBy === 'recent') {
+        // 按照日期从新到老排序 (Latest Updated)
+        cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+      } else if (sortBy === 'pinyin') {
+        // 按照中文拼音首字母 A-Z 排序 (Alphabetical)
+        cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
+      }
+
+      // 清空原有网格并按新顺序重新插入卡片
+      grid.innerHTML = '';
+      cards.forEach(card => grid.appendChild(card));
+    });
+  });
+</script>
