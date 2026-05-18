@@ -9,7 +9,7 @@ layout: default
     <div class="px-6 mb-8 mt-2 w-full">
       <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl p-5 shadow-sm w-full">
         
-        <!-- 核心架构：左右分栏 Flex 布局，确保多行文本的左端绝对对齐 -->
+        <!-- 左右分栏 Flex 布局，确保多行文本的左端绝对对齐 -->
         <div class="flex items-start space-x-3 w-full">
           
           <!-- 左侧：固定 MENU 标签 -->
@@ -66,7 +66,7 @@ layout: default
     <!-- 全局菜谱网格 -->
     <div id="recipe-grid" class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       {% assign sorted = site.recipes | sort:"date" | reverse %}
-      {% range post in sorted %}
+      {% for post in sorted %}
         
         <!-- 双保险安全过滤器 -->
         {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
