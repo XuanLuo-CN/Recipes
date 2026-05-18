@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/beef_porridge.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "seaweed_fried_rice"
+              "title": "beef_porridge"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/beef_porridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for seaweed_fried_rice"
+              "title": "Backlinks for beef_porridge"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/beef_porridge.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from seaweed_fried_rice"
+              "title": "Outgoing links from beef_porridge"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/beef_porridge.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of seaweed_fried_rice"
+              "title": "Outline of beef_porridge"
             }
           }
         ]
@@ -200,11 +200,11 @@
   },
   "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
-    "_recipes/Beef_porridge.md",
+    "_recipes/seaweed_fried_rice.md",
+    "_recipes/beef_porridge.md",
     "about.md",
     "Commend.md",
     "_recipes/korean_beaf_bbq.md",
-    "_recipes/seaweed_fried_rice.md",
     "Untitled.md",
     "_recipes/lemon_chicken.md",
     "_recipes/korean_pasta.md",
