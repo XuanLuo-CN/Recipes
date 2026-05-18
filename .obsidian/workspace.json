@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/korean_beaf_bbq.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "korean_beaf_bbq"
+              "title": "about"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/korean_beaf_bbq.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for korean_beaf_bbq"
+              "title": "Backlinks for about"
             }
           },
           {
@@ -128,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/korean_beaf_bbq.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from korean_beaf_bbq"
+              "title": "Outgoing links from about"
             }
           },
           {
@@ -171,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/korean_beaf_bbq.md",
+                "file": "about.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of korean_beaf_bbq"
+              "title": "Outline of about"
             }
           }
         ]
@@ -199,11 +198,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c077b33c0ea354f1",
+  "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
+    "Commend.md",
+    "_recipes/korean_beaf_bbq.md",
+    "_recipes/seaweed_fried_rice.md",
+    "Untitled.md",
     "_recipes/lemon_chicken.md",
     "_recipes/korean_pasta.md",
-    "_recipes/korean_beaf_bbq.md",
     "烹饪手法.md",
     "_recipes/mushroom_risotto.md",
     "_recipes/gai_lan.md",
@@ -223,9 +225,6 @@
     "_recipes/taro_balls.md",
     "_recipes/basil_beef.md",
     "_recipes/su_nong_dan.md",
-    "_recipes/stuffed_tofu.md",
-    "_recipes/soy_sauce_chicken.md",
-    "_recipes/spicy_pork_ribs.md",
-    "_recipes/short_ribs_with_scallion.md"
+    "_recipes/stuffed_tofu.md"
   ]
 }
