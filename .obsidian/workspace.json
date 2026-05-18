@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "_recipes/seaweed_fried_rice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "seaweed_fried_rice"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "_recipes/seaweed_fried_rice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for about"
+              "title": "Backlinks for seaweed_fried_rice"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about.md",
+                "file": "_recipes/seaweed_fried_rice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from about"
+              "title": "Outgoing links from seaweed_fried_rice"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.md",
+                "file": "_recipes/seaweed_fried_rice.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of about"
+              "title": "Outline of seaweed_fried_rice"
             }
           }
         ]
@@ -200,6 +200,8 @@
   },
   "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
+    "_recipes/Beef_porridge.md",
+    "about.md",
     "Commend.md",
     "_recipes/korean_beaf_bbq.md",
     "_recipes/seaweed_fried_rice.md",
@@ -223,8 +225,6 @@
     "_recipes/egg_with_chicken.md",
     "_recipes/dry_pot.md",
     "_recipes/taro_balls.md",
-    "_recipes/basil_beef.md",
-    "_recipes/su_nong_dan.md",
-    "_recipes/stuffed_tofu.md"
+    "_recipes/basil_beef.md"
   ]
 }
