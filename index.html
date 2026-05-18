@@ -5,9 +5,9 @@ layout: default
 <div class="content w-full md:w-4/5 h-full overflow-scroll">
   <div class="recipes mb-24 py-8">
     
-    <!-- 顶栏：一体化温馨欢迎与极简排序卡片 -->
-    <div class="px-6 mb-8 mt-2">
-      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl p-5 shadow-sm max-w-2xl">
+    <!-- 顶栏：一体化温馨欢迎与极简排序卡片（等宽设计） -->
+    <div class="px-6 mb-8 mt-2 w-full">
+      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl p-5 shadow-sm w-full">
         
         <!-- 第一行：欢迎区域 -->
         <div class="flex items-center space-x-3">
@@ -20,8 +20,8 @@ layout: default
         <!-- 两者之间好看的分割线 -->
         <div class="border-t border-stone-200/60 my-4"></div>
 
-        <!-- 第二行：极简文本排序切换（字号整体变小） -->
-        <div class="flex items-center space-x-2 text-xs">
+        <!-- 第二行：极简文本排序切换（字号变小，靠右缩进对齐） -->
+        <div class="flex items-center justify-end text-xs space-x-2">
           <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
           <div class="flex items-center space-x-2 font-medium select-none">
             <!-- 默认激活 Date：黑色且加粗 -->
@@ -49,6 +49,12 @@ layout: default
     <div id="recipe-grid" class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
+        
+        <!-- 💡 核心安全机制：自动识别并过滤掉 Chowdown 仓库自带的 6 个英文默认预设文件 -->
+        {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
+          {% continue %}
+        {% endif %}
+        
         <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
              data-title="{{ post.title }}">
@@ -65,38 +71,37 @@ layout: default
   </div>
 </div>
 
-<!-- 处理纯文本标签切换的 JavaScript -->
+<!-- 处理纯文本标签切换与动态总数校正的 JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const grid = document.getElementById('recipe-grid');
+    // 获取经过过滤器清洗后，真正属于你的菜谱卡片
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
     
+    // 自动校正头部的 MENU 总数，剔除那 6 个隐藏预设的干扰
+    const numDisplay = document.querySelector('.handwritten-num');
+    if (numDisplay) {
+      numDisplay.textContent = cards.length;
+    }
+
     const btnRecent = document.getElementById('btn-sort-recent');
     const btnPinyin = document.getElementById('btn-sort-pinyin');
 
     function updateSort(sortBy) {
       if (sortBy === 'recent') {
-        // 最近更新排序
         cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-        
-        // 样式联动：Date 变黑粗，Alpha 变灰细
         btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
         btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       } else if (sortBy === 'pinyin') {
-        // 拼音 A-Z 排序
         cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
-        
-        // 样式联动：Alpha 变黑粗，Date 变灰细
         btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-900 font-semibold cursor-pointer";
         btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-stone-600 cursor-pointer";
       }
 
-      // 清空原有 DOM 网格并按新顺序重新挂载卡片
       grid.innerHTML = '';
       cards.forEach(card => grid.appendChild(card));
     }
 
-    // 绑定文本点击事件
     btnRecent.addEventListener('click', () => updateSort('recent'));
     btnPinyin.addEventListener('click', () => updateSort('pinyin'));
   });
