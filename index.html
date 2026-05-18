@@ -11,33 +11,29 @@ layout: default
         
         <!-- 左右分栏 Flex 布局，确保多行文本的左端绝对对齐 -->
         <div class="flex items-start space-x-3 w-full">
-          
           <!-- 左侧：固定 MENU 标签 -->
           <div class="flex-shrink-0 mt-0.5">
             <span class="total-badge">MENU</span>
           </div>
           
-          <!-- 右侧：容纳两行内容，自动继承对齐线 -->
+          <!-- 右侧：容纳两行内容 -->
           <div class="flex-1 w-full">
-            
             <!-- 第一行：欢迎语 -->
             <div class="text-stone-700 text-lg sm:text-xl font-medium mb-3">
               Welcome to Xuan's Recipes!
             </div>
             
-            <!-- 第二行：数量统计（靠左）与 排序切换（靠右缩进） -->
+            <!-- 第二行：数量统计与排序切换 -->
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-3 pt-0.5">
-              
-              <!-- 数量统计（完美对齐 Welcome） -->
+              <!-- 数量统计 -->
               <div class="text-stone-600 text-sm sm:text-base font-medium">
                 We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
               </div>
               
-              <!-- 极简文本排序（右缩进对齐） -->
+              <!-- 极简文本排序 -->
               <div class="flex items-center justify-end text-xs space-x-2 select-none sm:mt-0 mt-1">
                 <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
                 <div class="flex items-center space-x-2 font-medium">
-                  <!-- 激活项保持网页专属红色 text-primary -->
                   <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer">
                     Date
                   </button>
@@ -47,11 +43,8 @@ layout: default
                   </button>
                 </div>
               </div>
-              
-            </div> <!-- 第二行结束 -->
-            
-          </div> <!-- 右侧弹性列结束 -->
-          
+            </div>
+          </div>
         </div>
 
       </div>
@@ -61,6 +54,12 @@ layout: default
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
       .total-badge { background: #F53200; color: white; font-size: 13px; padding: 3px 8px; border-radius: 6px; font-weight: bold; vertical-align: middle; }
       .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 44px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 4px; vertical-align: sub; }
+      
+      /* 弹窗滚动条极简美化 */
+      .modal-scroll::-webkit-scrollbar { width: 6px; }
+      .modal-scroll::-webkit-scrollbar-track { background: transparent; }
+      .modal-scroll::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+      .modal-scroll::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
     </style>
 
     <!-- 全局菜谱网格 -->
@@ -68,15 +67,16 @@ layout: default
       {% assign sorted = site.recipes | sort:"date" | reverse %}
       {% for post in sorted %}
         
-        <!-- 双保险安全过滤器 -->
         {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
           {% continue %}
         {% endif %}
         
-        <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition" 
+        <!-- 💡 绑定独特的 data-modal-id -->
+        <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition cursor-pointer" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
-             data-title="{{ post.title | escape }}">
-          <a class="block" href="{{ post.url | prepend: site.baseurl }}">
+             data-title="{{ post.title | escape }}"
+             data-modal-id="modal-{{ post.url | slugify }}">
+          <a class="block recipe-main-link" href="{{ post.url | prepend: site.baseurl }}">
             <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
                     {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
             </canvas>
@@ -89,7 +89,84 @@ layout: default
   </div>
 </div>
 
-<!-- 排序逻辑脚本 -->
+<!-- ========================================== -->
+<!-- 💡 弹窗图层底层区域 (独立于主页面流，防止堆叠冲突) -->
+<!-- ========================================== -->
+<div id="modals-layer">
+  {% for post in sorted %}
+    {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
+      {% continue %}
+    {% endif %}
+    
+    <div id="modal-{{ post.url | slugify }}" class="recipe-modal fixed inset-0 z-50 hidden bg-stone-900/40 backdrop-blur-sm flex items-center justify-center p-4">
+      <!-- 弹窗主体盒模型 -->
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8 modal-scroll flex flex-col">
+        
+        <!-- 右上角关闭按钮 -->
+        <button class="btn-close-modal absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition p-2 focus:outline-none cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <!-- 菜谱图片 -->
+        {% if post.image %}
+          <div class="aspect-video w-full rounded-xl bg-cover bg-center mb-6 flex-shrink-0" style="background-image:url({{ site.baseurl }}/images/{{ post.image }});"></div>
+        {% endif %}
+
+        <!-- 标题与标签 -->
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 font-gelica mb-2 pr-8">{{ post.title }}</h2>
+        {% if post.tags %}
+          <div class="flex flex-wrap gap-1.5 mb-6 flex-shrink-0">
+            {% for tag in post.tags %}
+              <span class="text-[11px] bg-stone-100 text-stone-600 px-2.5 py-0.5 rounded-md font-medium">#{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- 核心内容区域 -->
+        <div class="flex-1 text-stone-800 text-sm space-y-6">
+          
+          <!-- 用料清单 -->
+          {% if post.ingredients %}
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-3 font-inter">Ingredients</h3>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-stone-50 p-4 rounded-xl border border-stone-100">
+                {% for ingredient in post.ingredients %}
+                  <li class="flex items-center text-stone-700"><span class="text-primary mr-2">/</span> {{ ingredient }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          <!-- 制作步骤 -->
+          {% if post.directions %}
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-3 font-inter">Directions</h3>
+              <ol class="space-y-4 list-none pl-0">
+                {% for direction in post.directions %}
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-stone-100 text-stone-600 text-[11px] font-bold mr-3 mt-0.5 font-inter">{{ forloop.index }}</span>
+                    <span class="leading-relaxed text-stone-700">{{ direction }}</span>
+                  </li>
+                {% endfor %}
+              </ol>
+            </div>
+          {% endif %}
+
+          <!-- 额外心得/备注 (过滤无内容或初始占位词) -->
+          {% if post.content and post.content != "" and post.content != "steak" %}
+            <div class="border-t border-stone-100 pt-5 mt-4 text-stone-600 italic leading-relaxed">
+              {{ post.content }}
+            </div>
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- 整合控制逻辑：排序 + 弹窗交互 JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const grid = document.getElementById('recipe-grid');
@@ -97,12 +174,11 @@ layout: default
 
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
     
-    // 自动刷新真实存在的菜谱总数
+    // 1. 校正计数总数
     const numDisplay = document.querySelector('.handwritten-num');
-    if (numDisplay) {
-      numDisplay.textContent = cards.length;
-    }
+    if (numDisplay) { numDisplay.textContent = cards.length; }
 
+    // 2. 排序控制器
     const btnRecent = document.getElementById('btn-sort-recent');
     const btnPinyin = document.getElementById('btn-sort-pinyin');
 
@@ -121,5 +197,47 @@ layout: default
 
     btnRecent.addEventListener('click', () => updateSort('recent'));
     btnPinyin.addEventListener('click', () => updateSort('pinyin'));
+
+    // ==========================================
+    // 3. 核心：弹窗打开与关闭交互逻辑
+    // ==========================================
+    
+    // 利用事件代理监听网格点击，确保排序后监听依然 100% 有效
+    grid.addEventListener('click', function (e) {
+      const card = e.target.closest('.recipe-card');
+      if (!card) return;
+
+      // 关键：如果用户按下 Ctrl 键或右键点击，允许他们正常打开新页面；普通点击则进行弹窗拦截
+      if (e.metaKey || e.ctrlKey) return; 
+      e.preventDefault();
+
+      const modalId = card.dataset.modalId;
+      const targetModal = document.getElementById(modalId);
+      if (targetModal) {
+        targetModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // 锁定底层主页面滚动条
+      }
+    });
+
+    // 全局关闭弹窗监听器（点击暗色背景、点击 X 按钮、或者按下 ESC 键）
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('recipe-modal') || e.target.closest('.btn-close-modal')) {
+        closeActiveModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeActiveModal();
+      }
+    });
+
+    function closeActiveModal() {
+      const activeModal = document.querySelector('.recipe-modal:not(.hidden)');
+      if (activeModal) {
+        activeModal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden'); // 解锁滚动条
+      }
+    }
   });
 </script>
