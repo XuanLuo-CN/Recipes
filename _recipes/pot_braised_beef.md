@@ -1,36 +1,60 @@
 ---
-
 layout: recipe
-title: "罐焖牛肉"
+title_zh: "罐焖牛肉"
+title_en: "Pot Braised Beef"
 image: Pot_braised_beef.jpg
 
 tags:
-- Beaf
+- en: Beef
+  zh: "牛肉"
 
 ingredients:
-- 牛腩
-- 西芹
-- 胡萝卜
-- 洋葱
-- 盐
-- 红酒
-- 百里香
-- 黑胡椒
-- 香叶
-- 土豆
-- 黄油
-- 蒜
-- 番茄
-- 蕃茄膏
+- zh: "牛腩"
+  en: "Beef Brisket"
+- zh: "西芹"
+  en: "Celery"
+- zh: "胡萝卜"
+  en: "Carrot"
+- zh: "洋葱"
+  en: "Onion"
+- zh: "盐"
+  en: "Salt"
+- zh: "红酒"
+  en: "Red Wine"
+- zh: "百里香"
+  en: "Thyme"
+- zh: "黑胡椒"
+  en: "Black Pepper"
+- zh: "香叶"
+  en: "Bay Leaves"
+- zh: "土豆"
+  en: "Potatoes"
+- zh: "黄油"
+  en: "Butter"
+- zh: "蒜"
+  en: "Garlic"
+- zh: "番茄"
+  en: "Tomatoes"
+- zh: "蕃茄膏"
+  en: "Tomato Paste"
 
 directions:
-- 牛腩加西芹、胡萝卜、洋葱、盐、红酒、百里香、黑胡椒、香叶腌制
-- 牛腩煎至两面上色，最后把腌制的蔬菜和红酒入锅煸香
-- 加水进高压锅，加牛肉粉压半小时
-- 西芹、胡萝卜、土豆炸熟备用
-- 熬酱，黄油加蒜煸香，加入洋葱炒软
-- 加入鲜番茄、蕃茄膏炒熟
-- 原汤撇去油，加入酱汁中，加盐、糖、百里香
-- 肉回锅，加入蔬菜，汤汁收浓
-- 放入罐子，封上酥皮，180°F烤10min，完成
+- zh: "牛腩加西芹、胡萝卜、洋葱、盐、红酒、百里香、黑胡椒、香叶腌制"
+  en: "Marinate beef brisket with celery, carrots, onions, salt, red wine, thyme, black pepper, and bay leaves."
+- zh: "牛腩煎至两面上色，最后把腌制的蔬菜和红酒入锅煸香"
+  en: "Sear beef brisket on both sides until browned. Finally, sauté the marinated vegetables and red wine in the pot until fragrant."
+- zh: "加水进高压锅，加牛肉粉压半小时"
+  en: "Add water and beef bouillon to a pressure cooker, and pressure cook for 30 minutes."
+- zh: "西芹、胡萝卜、土豆炸熟备用"
+  en: "Fry celery, carrots, and potatoes until cooked, set aside."
+- zh: "熬酱，黄油加蒜煸香，加入洋葱炒软"
+  en: "Make the sauce: sauté garlic in butter until fragrant, add onions and stir-fry until softened."
+- zh: "加入鲜番茄、蕃茄膏炒熟"
+  en: "Add fresh tomatoes and tomato paste, and stir-fry until cooked."
+- zh: "原汤撇去油，加入酱汁中，加盐、糖、百里香"
+  en: "Skim oil from the original broth, add it to the sauce, season with salt, sugar, and thyme."
+- zh: "肉回锅，加入蔬菜，汤汁收浓"
+  en: "Return the beef to the pot, add the vegetables, and reduce the sauce until thickened."
+- zh: "放入罐子，封上酥皮，180°F烤10min，完成"
+  en: "Place in individual ramekins, top with puff pastry, bake at 180°F for 10 minutes, and serve."
 ---

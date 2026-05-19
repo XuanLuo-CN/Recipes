@@ -1,40 +1,68 @@
 ---
 layout: recipe
-title: "回锅肉"
+title_zh: "回锅肉"
+title_en: "Twice Cooked Pork"
 image: twice_cooked_pork.png
 
 tags:
-- Pork
-  
+- zh: "猪肉"
+  en: "Pork"
+
 ingredients:
-- 五花肉
-- 蒜苗
-- 豆豉
-- 料酒
-- 葱结
-- 姜片
-- 花椒粒
-- 小米辣
-- 姜
-- 蒜
-- 干辣椒段
-- 豆瓣酱
-- 甜面酱
-- 白糖
-- 味精
+- zh: "五花肉"
+  en: "Pork Belly"
+- zh: "蒜苗"
+  en: "Garlic Sprouts"
+- zh: "豆豉"
+  en: "Fermented Black Beans"
+- zh: "料酒"
+  en: "Cooking Wine"
+- zh: "葱结"
+  en: "Scallion Knots"
+- zh: "姜片"
+  en: "Ginger Slices"
+- zh: "花椒粒"
+  en: "Sichuan Peppercorns"
+- zh: "小米辣"
+  en: "Bird's Eye Chilies"
+- zh: "姜"
+  en: "Ginger"
+- zh: "蒜"
+  en: "Garlic"
+- zh: "干辣椒段"
+  en: "Dried Chili Segments"
+- zh: "豆瓣酱"
+  en: "Doubanjiang (Fermented Bean Paste)"
+- zh: "甜面酱"
+  en: "Sweet Bean Paste"
+- zh: "白糖"
+  en: "Sugar"
+- zh: "味精"
+  en: "MSG"
 
 directions:
-- 五花肉焯水，加料酒、葱结、姜片、花椒粒，煮20min
-- 蒜苗斜切，蒜叶蒜头分开放
-- 小米辣斜切，跟蒜头放一起
-- 姜蒜切丁，加花椒粒、干辣椒段
-- 一勺豆瓣酱和豆豉切碎，加半勺甜面酱
-- 五花肉切薄，起锅煸干
-- 加入花椒干辣椒煸香
-- 加入豆豉、甜面酱和豆瓣酱
-- 加入姜蒜末、料酒
-- 加入辣椒和青蒜头翻炒
-- 加入白糖、味精，放入青蒜叶
-- 完成
-
+- zh: "五花肉焯水，加料酒、葱结、姜片、花椒粒，煮20min"
+  en: "Blanch pork belly with cooking wine, scallion knots, ginger slices, and Sichuan peppercorns. Cook for 20 minutes."
+- zh: "蒜苗斜切，蒜叶蒜头分开放"
+  en: "Slice garlic sprouts diagonally, separating leaves from the white parts."
+- zh: "小米辣斜切，跟蒜头放一起"
+  en: "Slice bird's eye chilies diagonally, place with the white parts of garlic sprouts."
+- zh: "姜蒜切丁，加花椒粒、干辣椒段"
+  en: "Dice ginger and garlic, add Sichuan peppercorns and dried chili segments."
+- zh: "一勺豆瓣酱和豆豉切碎，加半勺甜面酱"
+  en: "Chop 1 tbsp doubanjiang and fermented black beans, add 0.5 tbsp sweet bean paste."
+- zh: "五花肉切薄，起锅煸干"
+  en: "Slice pork belly thinly, pan-fry in a wok until dry."
+- zh: "加入花椒干辣椒煸香"
+  en: "Add Sichuan peppercorns and dried chilies, stir-fry until fragrant."
+- zh: "加入豆豉、甜面酱和豆瓣酱"
+  en: "Add fermented black beans, sweet bean paste, and doubanjiang."
+- zh: "加入姜蒜末、料酒"
+  en: "Add minced ginger and garlic, cooking wine."
+- zh: "加入辣椒和青蒜头翻炒"
+  en: "Add chilies and the white parts of garlic sprouts, stir-fry."
+- zh: "加入白糖、味精，放入青蒜叶"
+  en: "Add sugar, MSG, then add garlic sprout leaves."
+- zh: "完成"
+  en: "Serve."
 ---

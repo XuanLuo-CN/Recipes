@@ -5,7 +5,8 @@ title_en: "Scallion Braised Beef Short Ribs"
 image: short_ribs_with_scallion.jpg
 
 tags:
-- Beef
+- en: Beef
+  zh: "牛肉"
 
 ingredients:
 - zh: "牛肋条"
