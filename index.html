@@ -86,10 +86,22 @@ layout: default
              data-title="{{ post.title | escape }}"
              data-modal-id="modal-{{ post.url | slugify }}">
           <a class="block recipe-main-link" href="{{ post.url | prepend: site.baseurl }}">
-            <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-1 bg-cover bg-center"
+            <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-2 bg-cover bg-center"
                     {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
             </canvas>
-            <h1 class="font-semibold leading-tight text-stone-800 mt-1 text-base">{{ post.title }}</h1>
+            <!-- 💡 中英文双语标题设计 -->
+            <div class="space-y-0.5 mt-1">
+              <!-- 上行：中文标题，主视觉 -->
+              <h1 class="font-bold leading-tight text-stone-800 text-base">
+                {% if post.title_zh %}{{ post.title_zh }}{% else %}{{ post.title }}{% endif %}
+              </h1>
+              <!-- 下行：英文标题，低调精致的衬线斜体 -->
+              {% if post.title_en %}
+                <p class="text-xs text-stone-400 italic font-serif tracking-wide leading-tight truncate">
+                  {{ post.title_en }}
+                </p>
+              {% endif %}
+            </div>
           </a>
         </div>
       {% endfor %}
@@ -138,9 +150,24 @@ layout: default
           {% if post.ingredients %}
             <div>
               <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-3 font-inter">Ingredients</h3>
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-stone-50 p-4 rounded-xl border border-stone-100">
+              <!-- 💡 宽度拉满，行距稍微扩大，营造呼吸感 -->
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 bg-stone-50/60 p-5 rounded-xl border border-stone-100">
                 {% for ingredient in post.ingredients %}
-                  <li class="flex items-center text-stone-700"><span class="text-primary mr-2">/</span> {{ ingredient }}</li>
+                  <li class="flex items-center justify-between w-full text-stone-700 py-0.5 group">
+                    <!-- 左侧：中文 + 淡淡的斜杠符号 -->
+                    <div class="flex items-center flex-shrink-0 text-sm font-medium text-stone-800">
+                      <span class="text-primary/70 mr-2 font-mono text-xs">/</span>
+                      {% if ingredient.zh %}{{ ingredient.zh }}{% else %}{{ ingredient }}{% endif %}
+                    </div>
+                    
+                    <!-- 中间：动态西餐厅点线虚线（随屏幕宽度自动伸缩，极具设计感） -->
+                    <div class="flex-1 mx-2 border-b border-dashed border-stone-200/80 content-[''] h-3"></div>
+                    
+                    <!-- 右侧：英文，靠右对齐，颜色放淡 -->
+                    <div class="text-xs text-stone-400 italic font-serif flex-shrink-0 tracking-wide">
+                      {% if ingredient.en %}{{ ingredient.en }}{% else %}-{% endif %}
+                    </div>
+                  </li>
                 {% endfor %}
               </ul>
             </div>
