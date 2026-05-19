@@ -6,7 +6,7 @@ image: Creamy_mushroom_pasta.jpg
 tags:
 - Chicken
 
-ingredients：
+ingredients:
 - 鸡肉
 - 意面
 - 蘑菇

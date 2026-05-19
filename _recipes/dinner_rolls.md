@@ -21,7 +21,6 @@ ingredients:
   en: "Egg"
 - zh: "海盐"
   en: "Sea Salt"
-
 directions:
 - zh: "200g高筋面粉加130g温牛奶，5g酵母，20g黄油，半个鸡蛋，15g糖，4g海盐"
   en: "Combine 200g bread flour with 130g warm milk, 5g yeast, 20g butter, half an egg, 15g sugar, and 4g sea salt."

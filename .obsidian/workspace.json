@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "1e7076fa1f9bc633",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_recipes/dumpling.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "dumpling"
+            }
+          },
+          {
             "id": "358c75f14f16527b",
             "type": "leaf",
             "state": {
@@ -35,7 +49,8 @@
               "title": "three_reds"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "素",
+                "query": "creamy_mushroom_pasta",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,8 +103,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -109,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/dumpling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for seaweed_fried_rice"
+              "title": "Backlinks for dumpling"
             }
           },
           {
@@ -128,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/dumpling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from seaweed_fried_rice"
+              "title": "Outgoing links from dumpling"
             }
           },
           {
@@ -171,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/seaweed_fried_rice.md",
+                "file": "_recipes/dumpling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of seaweed_fried_rice"
+              "title": "Outline of dumpling"
             }
           }
         ]
@@ -199,30 +213,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3e76f972b1afd79",
+  "active": "1e7076fa1f9bc633",
   "lastOpenFiles": [
+    "_recipes/dry_pot.md",
+    "_recipes/dinner_rolls.md",
+    "_recipes/creamy_mushroom_pasta.md",
+    "_recipes/coconut_jelly.md",
+    "_recipes/coconut_chicken.md",
+    "_recipes/chives_and_bean_sprouts.md",
+    "_recipes/bitter_melon_with_pork.md",
+    "_recipes/bitter_melon_rice.md",
+    "_recipes/beef_with_pickled_peppers.md",
+    "_recipes/beef_with_negishio_sauce.md",
+    "_recipes/beef_porridge.md",
+    "_recipes/beef_chow_fun.md",
+    "_recipes/beef_and_carrot.md",
+    "_recipes/basil_rice.md",
+    "_recipes/basil_beef.md",
+    "_recipes - 副本/creamy_mushroom_pasta.md",
+    "_recipes/seaweed_fried_rice.md",
+    "_recipes/three_reds.md",
+    "conflict-files-obsidian-git.md",
     "_recipes/mushroom_risotto.md",
     "_recipes/korean_pasta.md",
     "_recipes/hot_and_sour_shredded_potatoes.md",
     "_recipes/gai_lan.md",
     "_recipes/fried_cabbage.md",
-    "_recipes/chives_and_bean_sprouts.md",
     "_recipes/farmhouse_bowl.md",
     "_recipes/eggplane_with meat.md",
-    "_recipes/egg_with_chicken.md",
-    "_recipes/dumpling.md",
-    "_recipes/dry_pot.md",
-    "_recipes/dinner_rolls.md",
-    "_recipes/creamy_mushroom_pasta.md",
-    "_recipes/coconut_jelly.md",
-    "_recipes/bitter_melon_with_pork.md",
-    "_recipes/bitter_melon_rice.md",
-    "_recipes/beef_with_negishio_sauce.md",
-    "_recipes/beef_porridge.md",
-    "_recipes/beef_chow_fun.md",
-    "_recipes/beef_and_carrot.md",
-    "_recipes/basil_beef.md",
-    "_recipes - 副本/pot_braised_beef.md",
     "modified_files.log.tmp.65560.057b423013e5",
     "modified_files.log.tmp.65560.5cc8aa6dd6c0",
     "modified_files.log.tmp.65560.0c5e6890908c",
@@ -233,10 +251,6 @@
     "_recipes/coconut_jelly.md.tmp.65560.c34f70390534",
     "modified_files.log.tmp.65560.4a76ba431a93",
     "modified_files.log.tmp.65560.b09bf345888e",
-    "_recipes - 副本/basil_beef.md",
-    "_recipes - 副本/basil_rice.md",
-    "_recipes - 副本/beef_and_carrot.md",
-    "_recipes - 副本/beef_chow_fun.md",
     "_site/images/Taro_balls.png",
     "_site/images/Mochi_balls.png",
     "_site/images/Mapo_tofu.png",
