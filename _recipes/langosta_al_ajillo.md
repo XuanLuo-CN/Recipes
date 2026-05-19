@@ -8,8 +8,7 @@ tags:
 - seafood
 
 ingredients:
-- mantequilla de ajo
+- 龙虾
+- 蒜香黄油
+
 ---
-
-龙虾
-

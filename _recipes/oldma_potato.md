@@ -8,6 +8,16 @@ imagecredit: https://flic.kr/p/8ANQTc
 tags:
 - vegi
 
+ingredients:
+- 土豆
+- 酸菜
+- 葱
+- 肉末
+- 香菇
+- 蒜末
+- 干辣椒
+- 盐
+
 directions:
 - 土豆切片蒸熟，捏碎（不要太碎）
 - 2个香菇压入水中泡软
@@ -17,5 +27,3 @@ directions:
 - 加入土豆混合，加盐调味
 - 加入葱花，完成
 ---
-
-土豆，酸菜，葱，肉末，香菇
