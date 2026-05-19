@@ -7,7 +7,7 @@ image: Dinner_rolls.png
 tags:
 - Dessert
 
-ingredient：
+ingredient:
 - 高筋面粉
 - 黄油
 - 酵母
