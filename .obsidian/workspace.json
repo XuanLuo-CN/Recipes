@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/twice_cooked_pork.md",
+                "file": "_recipes/short_ribs_with_scallion.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "twice_cooked_pork"
+              "title": "short_ribs_with_scallion"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/twice_cooked_pork.md",
+                "file": "_recipes/short_ribs_with_scallion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for twice_cooked_pork"
+              "title": "Backlinks for short_ribs_with_scallion"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/twice_cooked_pork.md",
+                "file": "_recipes/short_ribs_with_scallion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from twice_cooked_pork"
+              "title": "Outgoing links from short_ribs_with_scallion"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/twice_cooked_pork.md",
+                "file": "_recipes/short_ribs_with_scallion.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of twice_cooked_pork"
+              "title": "Outline of short_ribs_with_scallion"
             }
           }
         ]
@@ -200,7 +200,9 @@
   },
   "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
+    "_recipes/soy_sauce_chicken.md",
     "_recipes/su_nong_dan.md",
+    "_recipes/twice_cooked_pork.md",
     "_recipes/short_ribs_with_scallion.md",
     "_recipes/seaweed_fried_rice.md",
     "_recipes/salt_grilled_mackerel.md",
@@ -224,8 +226,6 @@
     "_recipes/beef_and_carrot.md",
     "_recipes/beef_chow_fun.md",
     "_recipes/beef_porridge.md",
-    "_recipes/beef_with_negishio_sauce.md",
-    "_recipes/beef_with_pickled_peppers.md",
     "_recipes/bitter_melon_rice.md.tmp.81416.5b2cff6af62f",
     "_recipes/coconut_jelly.md.tmp.81416.6ab6f4705465",
     "_recipes/coconut_chicken.md.tmp.81416.e38f899cb20d",
