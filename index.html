@@ -2,51 +2,31 @@
 layout: default
 ---
 
-<div class="content w-full md:w-4/5 h-full overflow-scroll">
-  <div class="recipes mb-24 py-8">
+<div class="flex-1 w-full flex flex-col items-center text-center py-2">
+  <h1 class="text-stone-800 text-lg sm:text-xl font-bold tracking-widest">欢迎来到 XUAN 的数字菜谱</h1>
+  <p class="text-stone-400 text-xs italic font-serif tracking-widest uppercase mt-1">Welcome to Xuan's Recipes</p>
+  
+  <div class="w-12 border-b-2 border-stone-200/80 my-4"></div>
+  
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-4">
+    <div class="text-stone-600 text-xs sm:text-sm tracking-wide text-left flex items-center flex-wrap">
+      <span class="font-medium mr-1.5">当前已录入</span>
+      <span class="handwritten-num">{{ site.recipes | size }}</span>
+      <span class="font-medium ml-1">道精致料理</span>
+      <span class="text-stone-300 mx-2">|</span>
+      <span class="text-stone-400 italic font-serif">{{ site.recipes | size }} culinary tracks loaded</span>
+    </div>
     
-    <!-- 顶栏：两行式双轴完美对齐卡片（等宽设计） -->
-    <div class="px-6 mb-8 mt-2 w-full">
-      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl p-5 shadow-sm w-full">
-        
-        <!-- 左右分栏 Flex 布局，确保多行文本的左端绝对对齐 -->
-        <div class="flex items-start space-x-3 w-full">
-          <!-- 左侧：固定 MENU 标签 -->
-          <div class="flex-shrink-0 mt-0.5">
-            <span class="total-badge">MENU</span>
-          </div>
-          
-          <!-- 右侧：容纳两行内容 -->
-          <div class="flex-1 w-full">
-            <div class="text-stone-700 text-lg sm:text-xl font-medium pb-5 mb-4 border-b border-stone-200/80">
-              Welcome to Xuan's Recipes!
-            </div>
-            
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-3 pt-0 mb-1">
-              <!-- 数量统计 -->
-              <div class="text-stone-600 text-sm sm:text-base font-medium">
-                Here I have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready
-              </div>
-              
-              <!-- 极简文本排序 -->
-              <div class="flex items-center justify-end text-xs space-x-2 select-none sm:mt-0 mt-1">
-                <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
-                <div class="flex items-center space-x-2 font-medium">
-                  <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer">
-                    Date
-                  </button>
-                  <span class="text-stone-300">/</span>
-                  <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
-                    Alpha
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div class="flex items-center justify-end text-xs space-x-2 select-none flex-shrink-0">
+      <span class="text-stone-400 font-medium tracking-wider uppercase">Sort by:</span>
+      <div class="flex items-center space-x-2 font-medium">
+        <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer">Date</button>
+        <span class="text-stone-300">/</span>
+        <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">Alpha</button>
       </div>
     </div>
+  </div>
+</div>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
