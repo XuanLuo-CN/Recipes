@@ -198,8 +198,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3e76f972b1afd79",
+  "active": "e93263f6d7fdfa23",
   "lastOpenFiles": [
+    "index.html.tmp.81416.94f4b2cbedfe",
+    "index.html.tmp.81416.899e57dad244",
+    "_recipes/beef_chow_fun.md.tmp.88604.95255d4b553b",
+    "_recipes/beef_and_carrot.md.tmp.88604.65c64beced20",
+    "_recipes/basil_rice.md.tmp.88604.429b23052127",
     "_recipes/beef_and_carrot.md",
     "_recipes/basil_beef.md",
     "_recipes/twice_cooked_pork.md",
@@ -223,10 +228,6 @@
     "_recipes/spicy_pork_ribs.md.tmp.88604.d788201265e0",
     "_recipes/soy_sauce_chicken.md.tmp.88604.1875b2d4656b",
     "_recipes/shepherd's_pie.md.tmp.88604.336e9bfe5395",
-    "_recipes/reverse_sear_steak.md.tmp.88604.0faec8b64765",
-    "_recipes/pineapple_steak.md.tmp.88604.1014eed93b86",
-    "_recipes/pepper_beef_short_ribs.md.tmp.88604.4c72c379ac84",
-    "_recipes/oil_tomatos.md.tmp.88604.f89492cb9b7e",
     "_recipes/beef_with_negishio_sauce.md",
     "_recipes/dry_pot.md",
     "_recipes/dinner_rolls.md",
@@ -234,7 +235,6 @@
     "_recipes/coconut_jelly.md",
     "_recipes/lemon_chicken.md",
     "_recipes/grilled_pork_belly.md",
-    "_recipes/coconut_chicken.md",
-    "_recipes/beef_with_pickled_peppers.md"
+    "_recipes/coconut_chicken.md"
   ]
 }

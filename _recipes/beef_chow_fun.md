@@ -4,9 +4,8 @@ layout: recipe
 title:  "干炒牛河"
 image: Beef_chow_fun.png
 
-tags: 
+tags:
 - Beaf
-
 ingredients:
 - 1/3个洋葱
 - 三根小葱

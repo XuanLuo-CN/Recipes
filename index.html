@@ -56,10 +56,18 @@ layout: default
       .handwritten-num { font-family: 'Caveat', cursive, sans-serif; font-size: 44px; color: #F53200; font-weight: bold; line-height: 0.8; display: inline-block; transform: rotate(-5deg); margin: 0 4px; vertical-align: sub; }
       
       /* 弹窗滚动条极简美化 */
+      .modal-scroll { will-change: transform; }
       .modal-scroll::-webkit-scrollbar { width: 6px; }
       .modal-scroll::-webkit-scrollbar-track { background: transparent; }
       .modal-scroll::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
-      .modal-scroll::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+            .modal-scroll::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+
+      @media (hover: hover) {
+        .recipe-card:hover {
+          transform: scale(1.05) rotate(1deg);
+          transition: transform 150ms ease-in-out;
+        }
+      }
     </style>
 
     <!-- 全局菜谱网格 -->
@@ -72,7 +80,7 @@ layout: default
         {% endif %}
         
         <!-- 💡 绑定独特的 data-modal-id -->
-        <div class="recipe-card md:hover:scale-105 md:hover:rotate-1 transition cursor-pointer" 
+        <div class="recipe-card transition cursor-pointer" 
              data-date="{{ post.date | date: '%Y-%m-%d' }}" 
              data-title="{{ post.title | escape }}"
              data-modal-id="modal-{{ post.url | slugify }}">

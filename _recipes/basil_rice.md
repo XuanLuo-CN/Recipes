@@ -5,9 +5,8 @@ title:  "打抛饭"
 image: basil_rice.png
 
 tags:
-- Beaf
 - Pork
-
+- Beaf
 ingredients:
 - 肉末
 - 打抛叶

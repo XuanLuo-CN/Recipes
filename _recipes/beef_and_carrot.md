@@ -7,7 +7,6 @@ imagecredit: https://www.today.com/today/amp/tdna199419
 
 tags:
 - Beaf
-
 ingredients:
 - 牛腩
 - 萝卜

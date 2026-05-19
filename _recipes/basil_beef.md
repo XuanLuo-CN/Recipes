@@ -5,7 +5,6 @@ image: Basil_beef.png
 
 tags:
 - Beaf
-  
 ingredients:
 - 牛肉
 - 九层塔
