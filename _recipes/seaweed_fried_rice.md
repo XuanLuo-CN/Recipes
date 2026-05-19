@@ -5,7 +5,7 @@ title_en: "Seaweed Fried Rice"
 image: seaweed_fried_rice.png
 
 tags:
-- en: Vegetarian
+- en: Vege
   zh: "素食"
 
 ingredients:

@@ -5,7 +5,7 @@ title_en: "Stir-fried Chives and Bean Sprouts"
 image: Chives_and_bean_sprouts.png
 
 tags:
-- en: Vegetarian
+- en: Vege
   zh: "素食"
 
 ingredients:

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/grilled_pork_belly.md",
+                "file": "_recipes/salt_grilled_mackerel.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "grilled_pork_belly"
+              "title": "salt_grilled_mackerel"
             }
           },
           {
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "creamy_mushroom_pasta",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/grilled_pork_belly.md",
+                "file": "_recipes/salt_grilled_mackerel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for grilled_pork_belly"
+              "title": "Backlinks for salt_grilled_mackerel"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/grilled_pork_belly.md",
+                "file": "_recipes/salt_grilled_mackerel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from grilled_pork_belly"
+              "title": "Outgoing links from salt_grilled_mackerel"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/grilled_pork_belly.md",
+                "file": "_recipes/salt_grilled_mackerel.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of grilled_pork_belly"
+              "title": "Outline of salt_grilled_mackerel"
             }
           }
         ]
@@ -215,7 +215,17 @@
   },
   "active": "1e7076fa1f9bc633",
   "lastOpenFiles": [
+    "_recipes/shepherd's_pie.md",
+    "_recipes/su_nong_dan.md",
+    "_recipes/spicy_pork_ribs.md",
+    "_recipes/salt_grilled_mackerel.md",
+    "_recipes/stuffed_tofu.md",
+    "_recipes/hot_and_sour_shredded_potatoes.md",
+    "_recipes/chives_and_bean_sprouts.md",
     "_recipes/gai_lan.md",
+    "_recipes/seaweed_fried_rice.md",
+    "_recipes/korean_beef_bbq.md",
+    "_recipes/grilled_pork_belly.md",
     "_recipes/fried_cabbage.md",
     "_recipes/farmhouse_bowl.md",
     "_recipes/eggplane_with meat.md",
@@ -226,21 +236,11 @@
     "_recipes/creamy_mushroom_pasta.md",
     "_recipes/coconut_jelly.md",
     "_recipes/coconut_chicken.md",
-    "_recipes/chives_and_bean_sprouts.md",
     "_recipes/bitter_melon_with_pork.md",
     "_recipes/bitter_melon_rice.md",
     "_recipes/beef_with_pickled_peppers.md",
     "_recipes/beef_with_negishio_sauce.md",
     "_recipes/beef_porridge.md",
-    "_recipes/beef_chow_fun.md",
-    "_recipes/beef_and_carrot.md",
-    "_recipes/basil_rice.md",
-    "_recipes/basil_beef.md",
-    "_recipes - 副本/creamy_mushroom_pasta.md",
-    "_recipes/seaweed_fried_rice.md",
-    "_recipes/three_reds.md",
-    "conflict-files-obsidian-git.md",
-    "_recipes/mushroom_risotto.md",
     "modified_files.log.tmp.65560.057b423013e5",
     "modified_files.log.tmp.65560.5cc8aa6dd6c0",
     "modified_files.log.tmp.65560.0c5e6890908c",

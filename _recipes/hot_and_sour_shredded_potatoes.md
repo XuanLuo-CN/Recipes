@@ -6,7 +6,7 @@ image: hot_and_sour_shredded_potatoes.png
 
 tags:
 - zh: "素菜"
-  en: "Vegetarian"
+  en: "Vege"
 
 ingredients:
 - zh: "土豆"

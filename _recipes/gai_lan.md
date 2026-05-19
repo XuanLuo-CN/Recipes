@@ -5,7 +5,7 @@ title_en: "Stir-fried Gai Lan (Chinese Broccoli)"
 image: gai_lan.png
 tags:
 - zh: "素菜"
-  en: "Vegetarian"
+  en: "Vege"
 ingredients:
 - zh: "芥兰"
   en: "Gai Lan (Chinese Broccoli)"
