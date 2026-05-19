@@ -3,7 +3,7 @@ name: Auto-update
 on:
   push:
     branches:
-      - gh-page
+      - gh-pages
 
 permissions:
   contents: write 
