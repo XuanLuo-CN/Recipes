@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/short_ribs_with_scallion.md",
+                "file": "_recipes/korean_beef_bbq.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "short_ribs_with_scallion"
+              "title": "korean_beef_bbq"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/short_ribs_with_scallion.md",
+                "file": "_recipes/korean_beef_bbq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for short_ribs_with_scallion"
+              "title": "Backlinks for korean_beef_bbq"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/short_ribs_with_scallion.md",
+                "file": "_recipes/korean_beef_bbq.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from short_ribs_with_scallion"
+              "title": "Outgoing links from korean_beef_bbq"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/short_ribs_with_scallion.md",
+                "file": "_recipes/korean_beef_bbq.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of short_ribs_with_scallion"
+              "title": "Outline of korean_beef_bbq"
             }
           }
         ]
@@ -200,15 +200,21 @@
   },
   "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
-    "_recipes/soy_sauce_chicken.md",
+    "_recipes/korean_beaf_bbq.md",
+    "_recipes/korean_beef_bbq.md",
+    "_recipes/mapo_tofu.md",
+    "_recipes/pepper_beef_short_ribs.md",
+    "_recipes/pineapple_steak.md",
+    "_recipes/pot_braised_beef.md",
+    "_recipes/reverse_sear_steak.md",
+    "_recipes/shepherd's_pie.md",
+    "_recipes/stuffed_tofu.md",
     "_recipes/su_nong_dan.md",
-    "_recipes/twice_cooked_pork.md",
     "_recipes/short_ribs_with_scallion.md",
+    "_recipes/soy_sauce_chicken.md",
+    "_recipes/twice_cooked_pork.md",
     "_recipes/seaweed_fried_rice.md",
     "_recipes/salt_grilled_mackerel.md",
-    "_recipes/pot_braised_beef.md",
-    "_recipes/pepper_beef_short_ribs.md",
-    "_recipes/mapo_tofu.md",
     "_recipes/langosta_al_ajillo.md",
     "_recipes/korean_pasta.md",
     "_recipes/hot_and_sour_shredded_potatoes.md",
@@ -220,12 +226,6 @@
     "_recipes/dry_pot.md",
     "_recipes/dinner_rolls.md",
     "_recipes/creamy_mushroom_pasta.md",
-    "_recipes/coconut_jelly.md",
-    "_recipes/basil_beef.md",
-    "_recipes/basil_rice.md",
-    "_recipes/beef_and_carrot.md",
-    "_recipes/beef_chow_fun.md",
-    "_recipes/beef_porridge.md",
     "_recipes/bitter_melon_rice.md.tmp.81416.5b2cff6af62f",
     "_recipes/coconut_jelly.md.tmp.81416.6ab6f4705465",
     "_recipes/coconut_chicken.md.tmp.81416.e38f899cb20d",
