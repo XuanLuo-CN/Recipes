@@ -38,7 +38,7 @@ layout: default
   <header class="recipe-header flex flex-col gap-6 md:pt-16">
     <h1 class="recipe-title font-gelica text-primary text-left text-5xl lg:text-7xl font-bold" itemprop="name">{{ page.title }}</h1>
 
-    <div class="tags flex gap-2">
+    <div class="tags flex flex-wrap">
       {% for tag in page.tags %}
         <a href="{{ site.baseurl }}/search?tag={{ tag }}" class="tag mr-1 mb-1 py-1 px-3 bg-gray-200 rounded text-gray-700 no-underline hover:bg-gray-300 transition">
           {{ tag | strip }}
