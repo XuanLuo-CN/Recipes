@@ -47,7 +47,27 @@ layout: default
                   Here I Have {{ site.recipes | size }} Dishes Ready
                 </span>
                 
-                <div class="flex items-center justify-end text-xs space-x-2 select-none sm
+                <div class="flex items-center justify-end text-xs space-x-2 select-none sm:mt-0 mt-1 flex-shrink-0 ml-auto">
+                  <span class="text-stone-400 font-medium tracking-wider">Sort:</span>
+                  <div class="flex items-center space-x-2 font-medium">
+                    <button id="btn-sort-recent" class="focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer">
+                      Date
+                    </button>
+                    <span class="text-stone-300">/</span>
+                    <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
+                      Alpha
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div> 
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
