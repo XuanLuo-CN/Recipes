@@ -22,7 +22,7 @@ layout: default
                 欢迎来到 <span class="font-serif italic font-normal text-primary mx-0.5">Xuan</span> 的菜谱
               </span>
               
-              <span class="text-primary/40 text-xs hidden md:inline select-none">•</span>
+              <span class="text-primary/40 text-xs hidden md:inline select-none">/</span>
               
               <span class="text-stone-400 text-xs sm:text-sm italic font-serif tracking-wider">
                 Welcome to Xuan's Recipes!
@@ -36,9 +36,10 @@ layout: default
               <div class="text-stone-700 text-sm sm:text-base font-medium flex items-baseline flex-wrap gap-x-1.5">
                 <span class="text-stone-700 font-medium">这里已备好</span>
                 <span class="handwritten-num">{{ site.recipes | size }}</span>
-                <span class="text-stone-700 font-medium">道料理：</span>
+                <span class="text-stone-700 font-medium">道料理：</span>        
+                <span class="text-primary/40 text-xs hidden md:inline select-none">/</span>
                 <span class="text-stone-400 text-xs italic font-serif tracking-wide block sm:inline mt-0.5 sm:mt-0">
-                  / Here I have {{ site.recipes | size }} dishes ready
+                  Here I have {{ site.recipes | size }} dishes ready
                 </span>
               </div>
               
