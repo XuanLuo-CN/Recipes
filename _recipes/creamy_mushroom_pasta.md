@@ -6,6 +6,13 @@ image: Creamy_mushroom_pasta.jpg
 tags:
 - Chicken
 
+ingredients：
+- 鸡肉
+- 意面
+- 蘑菇
+- 白葡萄酒
+- 帕马森芝士
+- 淡奶油
 directions:
 - 鸡肉切厚片，加入面粉、黑胡椒抓匀
 - 鸡肉煎至两面上色，取出备用
@@ -17,5 +24,3 @@ directions:
 - 加入芝士、欧芹碎，完成
 
 ---
-
-鸡肉，意面，蘑菇，白葡萄酒，芝士，淡奶油
