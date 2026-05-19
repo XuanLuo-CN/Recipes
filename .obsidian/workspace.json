@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/dumpling.md",
+                "file": "_recipes/grilled_pork_belly.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "dumpling"
+              "title": "grilled_pork_belly"
             }
           },
           {
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/dumpling.md",
+                "file": "_recipes/grilled_pork_belly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for dumpling"
+              "title": "Backlinks for grilled_pork_belly"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/dumpling.md",
+                "file": "_recipes/grilled_pork_belly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from dumpling"
+              "title": "Outgoing links from grilled_pork_belly"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/dumpling.md",
+                "file": "_recipes/grilled_pork_belly.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of dumpling"
+              "title": "Outline of grilled_pork_belly"
             }
           }
         ]
@@ -215,6 +215,12 @@
   },
   "active": "1e7076fa1f9bc633",
   "lastOpenFiles": [
+    "_recipes/gai_lan.md",
+    "_recipes/fried_cabbage.md",
+    "_recipes/farmhouse_bowl.md",
+    "_recipes/eggplane_with meat.md",
+    "_recipes/egg_with_chicken.md",
+    "_recipes/dumpling.md",
     "_recipes/dry_pot.md",
     "_recipes/dinner_rolls.md",
     "_recipes/creamy_mushroom_pasta.md",
@@ -235,12 +241,6 @@
     "_recipes/three_reds.md",
     "conflict-files-obsidian-git.md",
     "_recipes/mushroom_risotto.md",
-    "_recipes/korean_pasta.md",
-    "_recipes/hot_and_sour_shredded_potatoes.md",
-    "_recipes/gai_lan.md",
-    "_recipes/fried_cabbage.md",
-    "_recipes/farmhouse_bowl.md",
-    "_recipes/eggplane_with meat.md",
     "modified_files.log.tmp.65560.057b423013e5",
     "modified_files.log.tmp.65560.5cc8aa6dd6c0",
     "modified_files.log.tmp.65560.0c5e6890908c",
