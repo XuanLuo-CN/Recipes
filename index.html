@@ -117,7 +117,7 @@ layout: default
         {% if post.tags %}
           <div class="flex flex-wrap gap-1.5 mb-6 flex-shrink-0">
             {% for tag in post.tags %}
-              <span class="text-[11px] bg-stone-100 text-stone-600 px-2.5 py-0.5 rounded-md font-medium">#{{ tag }}</span>
+              <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
             {% endfor %}
           </div>
         {% endif %}
