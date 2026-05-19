@@ -2,10 +2,7 @@
 layout: default
 ---
 
-<div class="content w-full md:w-4/5 h-full overflow-scroll">
-  <div class="recipes mb-24 py-8">
-    
-    <div class="px-6 mb-8 mt-2 w-full">
+<div class="px-6 mb-8 mt-2 w-full">
       <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-3 px-5 shadow-sm w-full">
         
         <div class="flex items-start space-x-3 w-full">
@@ -16,11 +13,11 @@ layout: default
           <div class="flex-1 w-full">
             
             <div class="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] md:items-baseline w-full gap-y-1">
-              <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider md:text-right md:pr-4">
+              <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider md:text-left">
                 欢迎来到&nbsp;<span class="italic font-bold text-primary mx-0.5" style="font-family: Georgia, serif;">Xuan</span>&nbsp;的菜谱
               </span>
-              <span class="text-primary/40 text-xs hidden md:block select-none text-center">/</span>
-              <span class="text-stone-400 text-xs italic font-serif tracking-wide block md:pl-4">
+              <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
+              <span class="text-stone-400 text-xs italic font-serif tracking-wide block md:text-left md:pl-4">
                 Welcome to Xuan's Recipes
               </span>
             </div>
@@ -37,13 +34,13 @@ layout: default
             
             <div class="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] md:items-baseline w-full gap-y-3">
               
-              <div class="text-stone-700 text-sm sm:text-base font-medium flex items-baseline flex-wrap justify-start md:justify-end md:pr-4 gap-x-1.5">
-                <span class="text-stone-700 font-medium">这里已备好</span>
-                <span class="handwritten-num">{{ site.recipes | size }}</span>
-                <span class="text-stone-700 font-medium">道料理：</span>        
+              <div class="text-stone-700 text-sm sm:text-base font-medium flex items-baseline flex-wrap justify-start">
+                <span class="text-stone-700 font-medium -mr-1.5">这里已备好</span>
+                <span class="handwritten-num mx-0 px-0">{{ site.recipes | size }}</span>
+                <span class="text-stone-700 font-medium -ml-1">道料理：</span>        
               </div>
 
-              <span class="text-primary/40 text-xs hidden md:block select-none text-center">/</span>
+              <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
 
               <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between md:pl-4 gap-3 w-full">
                 <span class="text-stone-400 text-xs italic font-serif tracking-wide block sm:inline mt-0.5 sm:mt-0">
@@ -64,7 +61,9 @@ layout: default
                 </div>
               </div>
 
-            </div> </div>
+            </div> 
+            
+          </div>
         </div>
 
       </div>
