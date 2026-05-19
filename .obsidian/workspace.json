@@ -213,8 +213,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e7076fa1f9bc633",
+  "active": "e93263f6d7fdfa23",
   "lastOpenFiles": [
+    "新建文件夹",
+    "update.py",
     "README.md",
     "about.md",
     "Commend.md",
@@ -240,7 +242,6 @@
     "_recipes/creamy_mushroom_pasta.md",
     "_recipes/coconut_jelly.md",
     "_recipes/coconut_chicken.md",
-    "_recipes/bitter_melon_with_pork.md",
     "modified_files.log.tmp.65560.057b423013e5",
     "modified_files.log.tmp.65560.5cc8aa6dd6c0",
     "modified_files.log.tmp.65560.0c5e6890908c",
@@ -250,7 +251,6 @@
     "modified_files.log.tmp.65560.b5ae79865182",
     "_recipes/coconut_jelly.md.tmp.65560.c34f70390534",
     "modified_files.log.tmp.65560.4a76ba431a93",
-    "modified_files.log.tmp.65560.b09bf345888e",
     "_site/images/Taro_balls.png",
     "_site/images/Mochi_balls.png",
     "_site/images/Mapo_tofu.png",

@@ -1,0 +1,31 @@
+name: Auto-update
+
+on:
+  push:
+    branches:
+      - gh-page
+
+permissions:
+  contents: write 
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-state: '3.10'
+
+    - name: Run Update Script
+      run: python update.py
+
+    - name: Commit and Push if changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git diff --quiet || (git add about.md && git commit -m "🤖 Auto-update README to about.md [skip ci]" && git push)
