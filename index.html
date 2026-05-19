@@ -19,7 +19,8 @@ layout: default
           <!-- 右侧：容纳两行内容 -->
           <div class="flex-1 w-full">
             <!-- 第一行：欢迎语 -->
-            <div class="text-stone-700 text-lg sm:text-xl font-medium mb-3">
+            <!-- 💡 这里加上了 border-b（下边框）、pb-3（下内边距）和 border-stone-200/80（淡淡的岩石灰线条颜色） -->
+            <div class="text-stone-700 text-lg sm:text-xl font-medium pb-3 mb-3 border-b border-stone-200/80">
               Welcome to Xuan's Recipes!
             </div>
             
@@ -27,7 +28,7 @@ layout: default
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-3 pt-0.5">
               <!-- 数量统计 -->
               <div class="text-stone-600 text-sm sm:text-base font-medium">
-                We have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
+                Here I have <span class="handwritten-num">{{ site.recipes | size }}</span> dishes ready.
               </div>
               
               <!-- 极简文本排序 -->
