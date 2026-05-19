@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/beef_with_negishio_sauce.md",
+                "file": "_recipes/mushroom_risotto.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "beef_with_negishio_sauce"
+              "title": "mushroom_risotto"
             }
           },
           {
@@ -54,7 +54,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/beef_with_negishio_sauce.md",
+                "file": "_recipes/mushroom_risotto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for beef_with_negishio_sauce"
+              "title": "Backlinks for mushroom_risotto"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/beef_with_negishio_sauce.md",
+                "file": "_recipes/mushroom_risotto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from beef_with_negishio_sauce"
+              "title": "Outgoing links from mushroom_risotto"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/beef_with_negishio_sauce.md",
+                "file": "_recipes/mushroom_risotto.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of beef_with_negishio_sauce"
+              "title": "Outline of mushroom_risotto"
             }
           }
         ]
@@ -198,43 +198,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e93263f6d7fdfa23",
+  "active": "a3e76f972b1afd79",
   "lastOpenFiles": [
-    "index.html.tmp.81416.94f4b2cbedfe",
-    "index.html.tmp.81416.899e57dad244",
-    "_recipes/beef_chow_fun.md.tmp.88604.95255d4b553b",
-    "_recipes/beef_and_carrot.md.tmp.88604.65c64beced20",
-    "_recipes/basil_rice.md.tmp.88604.429b23052127",
-    "_recipes/beef_and_carrot.md",
-    "_recipes/basil_beef.md",
-    "_recipes/twice_cooked_pork.md",
-    "_recipes - 副本/coconut_jelly.md",
-    "_recipes - 副本/beef_porridge.md",
-    "_recipes - 副本/beef_and_carrot.md",
-    "_recipes/spicy_pork_ribs.md",
-    "_recipes/short_ribs_with_scallion.md",
-    "_recipes/oldma_potato.md",
-    "_recipes/mushroom_risotto.md",
-    "_recipes/langosta_al_ajillo.md",
-    "_recipes/hot_and_sour_shredded_potatoes.md",
-    "_recipes/gai_lan.md",
-    "_recipes/fried_cabbage.md",
-    "_recipes/farmhouse_bowl.md",
-    "_recipes/eggplane_with meat.md",
-    "_recipes/egg_with_chicken.md",
-    "_recipes/taro_balls.md.tmp.88604.8c6e6c40ef5a",
-    "_recipes/su_nong_dan.md.tmp.88604.23c2c949e321",
-    "_recipes/stuffed_tofu.md.tmp.88604.42ac2c2ffd12",
-    "_recipes/spicy_pork_ribs.md.tmp.88604.d788201265e0",
-    "_recipes/soy_sauce_chicken.md.tmp.88604.1875b2d4656b",
-    "_recipes/shepherd's_pie.md.tmp.88604.336e9bfe5395",
-    "_recipes/beef_with_negishio_sauce.md",
-    "_recipes/dry_pot.md",
-    "_recipes/dinner_rolls.md",
-    "_recipes/creamy_mushroom_pasta.md",
-    "_recipes/coconut_jelly.md",
-    "_recipes/lemon_chicken.md",
     "_recipes/grilled_pork_belly.md",
-    "_recipes/coconut_chicken.md"
+    "_recipes/fried_cabbage.md",
+    "_recipes/egg_with_chicken.md",
+    "_recipes/dinner_rolls.md",
+    "_recipes/dry_pot.md",
+    "_recipes/beef_chow_fun.md",
+    "_recipes/beef_and_carrot.md",
+    "_recipes/basil_rice.md",
+    "_recipes/mochi_balls.md",
+    "_recipes/lamb_with_scallions.md",
+    "_recipes/dumpling.md",
+    "_recipes/bitter_melon_with_pork.md",
+    "_recipes/hot_and_sour_shredded_potatoes.md",
+    "_recipes/lemon_chicken.md",
+    "_recipes/oil_tomatos.md",
+    "_recipes/pepper_beef_short_ribs.md",
+    "_recipes/pineapple_steak.md",
+    "_recipes/pot_braised_beef.md",
+    "_recipes/reverse_sear_steak.md",
+    "_recipes/shepherd's_pie.md",
+    "_recipes/short_ribs_with_scallion.md",
+    "_recipes/soy_sauce_chicken.md",
+    "_recipes/spicy_pork_ribs.md",
+    "_recipes/taro_balls.md",
+    "_recipes/basil_beef.md",
+    "_recipes/stuffed_tofu.md",
+    "_recipes/bitter_melon_rice.md.tmp.81416.5b2cff6af62f",
+    "_recipes/coconut_jelly.md.tmp.81416.6ab6f4705465",
+    "_recipes/coconut_chicken.md.tmp.81416.e38f899cb20d",
+    "_recipes/chives_and_bean_sprouts.md.tmp.81416.e0462245207e",
+    "_recipes/creamy_mushroom_pasta.md.tmp.81416.617c5f46e0c8",
+    "_recipes/coconut_jelly.md.tmp.81416.2a0b0ce22167",
+    "_recipes/coconut_chicken.md.tmp.81416.634cfa3e96d3",
+    "_recipes/chives_and_bean_sprouts.md.tmp.81416.e24de21376e3",
+    "_recipes/creamy_mushroom_pasta.md.tmp.81416.1afbfbd2790c",
+    "_recipes/creamy_mushroom_pasta.md.tmp.81416.96a505ee8481"
   ]
 }

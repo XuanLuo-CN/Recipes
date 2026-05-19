@@ -5,7 +5,7 @@ title:  "葱烧牛肋条"
 image: Short_ribs_with_scallion.jpg
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 牛肋条

@@ -5,7 +5,7 @@ title:  "玫瑰豉油鸡"
 image: Soy_sauce_chicken.png
 
 tags:
-- chicken
+- Chicken
 
 ingredients:
 - 鸡肉

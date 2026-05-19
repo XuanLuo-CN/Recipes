@@ -5,8 +5,7 @@ title:  "沙茶牛肉粥"
 image: Beef_porridge.png
 
 tags:
-- mains
-- meat
+- Beaf
 
 ingredients:
 - 牛肉

@@ -5,7 +5,7 @@ title:  "菌菇烩饭"
 image: mushroom_risotto.png
 
 tags:
-- vegi
+- Vegi
 
 ingredients:
 - 菌菇

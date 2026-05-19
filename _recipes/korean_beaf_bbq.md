@@ -3,8 +3,7 @@ layout: recipe
 title: 韩式烤牛肉
 image: korean_beaf_bbq.png
 tags:
-  - beaf
-  - Korean Food
+  - Beaf
 ingredients:
   - 牛肉
   - 梨

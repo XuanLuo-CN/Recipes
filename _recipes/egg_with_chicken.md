@@ -5,7 +5,7 @@ title:  "洋葱鸡肉滑蛋饭"
 image: egg_with_chicken.png
 
 tags:
-- chicken
+- Chicken
 
 ingredients:
 - 鸡肉

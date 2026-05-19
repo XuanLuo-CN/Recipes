@@ -5,7 +5,7 @@ title:  "蒜香黄油龙虾"
 image: langosta_al_ajillo.png
 
 tags:
-- seafood
+- Seafood
 
 ingredients:
 - 龙虾

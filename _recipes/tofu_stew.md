@@ -3,8 +3,8 @@ layout: recipe
 title: 辣豆腐汤
 image: tofu_stew.png
 tags:
-  - pork
-  - beaf
+  - Pork
+  - Beef
 ingredients:
   - 豆腐
   - 五花肉

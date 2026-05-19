@@ -3,7 +3,7 @@ layout: recipe
 title: 海苔炒饭
 image: seaweed_fried_rice.png
 tags:
-  - Mains
+  - Vegi
 ingredients:
   - 海苔
   - 芝麻

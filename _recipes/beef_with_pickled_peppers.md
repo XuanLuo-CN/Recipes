@@ -5,7 +5,7 @@ title: "泡椒牛肉"
 image: Beef_with_pickled_peppers.png
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 泡椒

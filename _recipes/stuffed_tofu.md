@@ -5,8 +5,8 @@ title:  "酿豆腐"
 image: Stuffed_tofu.png
 
 tags:
-- pork
-- beaf
+- Pork
+- Beaf
 
 ingredients:
 - 肉末

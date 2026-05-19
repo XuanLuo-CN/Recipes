@@ -5,7 +5,7 @@ title:  "手撕包菜"
 image: fried_cabbage.png
 
 tags:
-- vegi
+- Vegi
 
 ingredients:
 - 包菜

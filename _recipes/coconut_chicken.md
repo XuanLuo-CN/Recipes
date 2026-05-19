@@ -6,7 +6,7 @@ image: Coconut_chicken.png
 imagecredit: https://flic.kr/p/7HZmzn
 
 tags:
-- chicken
+- Chicken
 
 ingredients:
 - 椰子水 1L

@@ -4,7 +4,7 @@ title: 韩式牛肋骨
 image: Su_nong_dan.jpg
 
 tags:
-  - beaf
+  - Beaf
     
 ingredients:
 - 牛肋骨

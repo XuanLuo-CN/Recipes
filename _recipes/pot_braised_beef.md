@@ -5,7 +5,7 @@ title: "罐焖牛肉"
 image: Pot_braised_beef.jpg
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 牛腩

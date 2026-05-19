@@ -6,7 +6,8 @@ image: oldma_potato.png
 imagecredit: https://flic.kr/p/8ANQTc
 
 tags:
-- vegi
+- Beef
+- Pork
 
 ingredients:
 - 土豆

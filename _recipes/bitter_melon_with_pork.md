@@ -5,8 +5,8 @@ title:  "苦瓜酿肉"
 image: Bitter_melon_with_pork.png
 
 tags:
-- beaf
-- pork
+- Beaf
+- Pork
 
 ingredients:
 - 蘑菇

@@ -5,7 +5,7 @@ title:  "菠萝牛肉粒"
 image: Pineapple_steak.png
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 牛肉

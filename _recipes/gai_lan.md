@@ -3,7 +3,6 @@ layout: recipe
 title: "炒芥兰"
 image: gai_lan.png
 tags:
-- vegi
 ingredients:
 - 芥兰
 - 猪油

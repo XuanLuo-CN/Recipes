@@ -5,7 +5,7 @@ title:  "反向法牛排"
 image: Reverse_sear_steak.png
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 牛排

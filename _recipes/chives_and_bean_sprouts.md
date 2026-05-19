@@ -4,7 +4,7 @@ title: "韭菜炒豆芽"
 image: Chives_and_bean_sprouts.png
 
 tags:
-- vegi
+- Vegi
   
 ingredients:
 - 韭菜

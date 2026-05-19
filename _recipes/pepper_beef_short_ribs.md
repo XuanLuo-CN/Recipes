@@ -5,7 +5,7 @@ title:  "黑椒牛仔骨"
 image: Pepper_beef_short_ribs.jpg
 
 tags:
-- beaf
+- Beaf
 
 ingredients:
 - 牛仔骨

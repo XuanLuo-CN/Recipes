@@ -4,7 +4,7 @@ title: "回锅肉"
 image: twice_cooked_pork.png
 
 tags:
-- pork
+- Pork
   
 ingredients:
 - 五花肉

@@ -3,7 +3,7 @@ layout: recipe
 title:  "干锅鸡翅"
 image: jalapeno-cornbread.jpg
 tags:
-- chicken
+  - Chicken
 ingredients:
 - 洋葱1个
 - 鸡翅八只

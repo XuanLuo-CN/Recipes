@@ -5,7 +5,7 @@ title:  "糯米小丸子"
 image: Mochi_balls.png
 
 tags:
-- dessert
+- Dessert
 
 ingredients:
 - 糯米粉

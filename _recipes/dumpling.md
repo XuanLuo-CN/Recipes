@@ -5,9 +5,8 @@ title:  "饺子"
 image: Dumpling.png
 
 tags:
-- mains
-- pork
-- beaf
+- Pork
+- Beaf
 
 ingredients:
 - 肉末

@@ -3,7 +3,7 @@ layout: recipe
 title: 盐烤青花鱼
 image: salt_grilled_mackerel.png
 tags:
-  - seafood
+  - Seafood
 ingredients:
   - 青花鱼
   - 柠檬

@@ -5,7 +5,8 @@ title:  "红三剁"
 image: pace-pork.jpg
 
 tags:
-- vegi
+- Beef
+- Pork
 
 
 ingredients:

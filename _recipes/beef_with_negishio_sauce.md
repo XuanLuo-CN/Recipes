@@ -4,7 +4,7 @@ title: "葱盐牛肉"
 image: Beef_with_negishio_sauce.png
 
 tags:
-- beaf
+- Beaf
   
 ingredients:
 - 牛肉

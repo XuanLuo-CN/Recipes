@@ -5,7 +5,7 @@ title: "江西辣排骨"
 image: Spicy_pork_ribs.png
 
 tags:
-- pork
+- Pork
 
 ingredients:
 - 排骨

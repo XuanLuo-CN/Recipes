@@ -5,9 +5,8 @@ title:  "苦瓜酸菜炒饭"
 image: Bitter_melon_rice.png
 
 tags:
-- beaf
-- pork
-- main
+- Beaf
+- Pork
 
 ingredients:
 - 苦瓜

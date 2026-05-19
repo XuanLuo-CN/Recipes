@@ -5,7 +5,7 @@ title:  "酸辣土豆丝"
 image: hot_and_sour_shredded_potatoes.png
 
 tags:
-- vegi
+- Vegi
 
 ingredients:
 - 土豆

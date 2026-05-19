@@ -3,9 +3,7 @@ layout: recipe
 title: 韩杏意面
 image: korean_pasta.png
 tags:
-  - Mains
   - Vegi
-  - Korean Food
 ingredients:
   - 杏鲍菇
   - 韩式辣酱
