@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_recipes/salt_grilled_mackerel.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "salt_grilled_mackerel"
+              "title": "about"
             }
           },
           {
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_recipes/salt_grilled_mackerel.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for salt_grilled_mackerel"
+              "title": "Backlinks for about"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_recipes/salt_grilled_mackerel.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from salt_grilled_mackerel"
+              "title": "Outgoing links from about"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_recipes/salt_grilled_mackerel.md",
+                "file": "about.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of salt_grilled_mackerel"
+              "title": "Outline of about"
             }
           }
         ]
@@ -215,10 +215,12 @@
   },
   "active": "1e7076fa1f9bc633",
   "lastOpenFiles": [
+    "README.md",
+    "about.md",
+    "_recipes/salt_grilled_mackerel.md",
     "_recipes/shepherd's_pie.md",
     "_recipes/su_nong_dan.md",
     "_recipes/spicy_pork_ribs.md",
-    "_recipes/salt_grilled_mackerel.md",
     "_recipes/stuffed_tofu.md",
     "_recipes/hot_and_sour_shredded_potatoes.md",
     "_recipes/chives_and_bean_sprouts.md",
@@ -239,8 +241,6 @@
     "_recipes/bitter_melon_with_pork.md",
     "_recipes/bitter_melon_rice.md",
     "_recipes/beef_with_pickled_peppers.md",
-    "_recipes/beef_with_negishio_sauce.md",
-    "_recipes/beef_porridge.md",
     "modified_files.log.tmp.65560.057b423013e5",
     "modified_files.log.tmp.65560.5cc8aa6dd6c0",
     "modified_files.log.tmp.65560.0c5e6890908c",

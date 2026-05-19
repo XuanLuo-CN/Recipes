@@ -1,48 +1,43 @@
-# Chowdown
 
-A simple, plaintext recipe database for hackers
+欢迎来到Xuan的数字菜谱！这是一个专为高效录入、精致展示而设计的现代化个人菜谱微型系统。
 
-[http://chowdown.io](http://chowdown.io)
 
-# Getting Started
+---
 
-This is a Jekyll build. Make sure you have Jekyll [installed](https://jekyllrb.com/). To install, run this command in the terminal (or iTerm, etc):
+### 自定义增强功能
+在原本极简的 Chowdown 模板基础上，我深度定制了以下功能：
 
-```gem install bundler jekyll```
+*   **自动计数**：全站菜谱数量、分类标签实时统计一目了然。
+*   **智能排序**：支持多维度排序，快速捞出你想做的那道菜。
+*   **精致排版**：针对中文字体、中英文混排以及烹饪步骤的间距进行了深度视觉优化。
+*   **便捷浮窗**：在主页点击菜品直接弹出精致的高性能浮窗展示详细信息，无需频繁切换和刷新页面。
 
-or to check if you've got it installed already:
+---
+###  怎么加一道新菜
+本站最大的特色在于其**近乎零成本的录入体验**。当我想记录一道新菜时：
+1. 我只需输入**菜品做法步骤**。
+2. 系统会自动调用 **Google Gemini** 进行全自动填充以下内容：
+	1. **原料提取**：自动规范化生成精确的原料表。
+	2. **自动归类**：智能分析并打上跨维度的标签。
+	3. **视觉生成**：自动为这道菜量身定制并渲染出一张精美的插图。
 
-```jekyll -v```
+真正实现了“我只管做菜和记录，剩下的排版和设计全部交给 AI”。
 
-Clone or download this repo. Navigate to the folder in terminal (or iTerm, etc), and then run:
+----
 
-```jekyll serve```
+###  技术栈
+Framework: Jekyll (Ruby)
 
-With default settings, you should be able to view the site locally at `http://127.0.0.1:4000/`
+Theme: Chowdown (Modified)
 
-# Writing a Recipe
+AI Engine: Google Gemini (Flash / Pro)
 
-The recipes are stored in the collection "Recipes" (the folder /_recipes).
+本地编译工具
+* Environment: `Ruby & Bundler`
+* CSS Compiler: `Tailwind CSS CLI`
 
-They are written in Markdown and contain a few special sections:
-
-- The frontmatter, which contains:
- - Title, Image, and Layout (which is "recipe")
- - Ingredients (a list of things in the dish)
- - Directions (a list of steps for the dish)
-- Body content (for intros, stories, written detail)
-
-If you need help with Markdown, here's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-# Writing a component recipe
-
-A component recipe is a special recipe made up of other recipes. To make a new component recipe:
-
-- place your smaller, single recipes into the /_components folder
-- make a new recipe like normal in the /_recipes folders
-- in the frontmatter of this new recipe, include your recipes from the /_components folder (instead of the usual Ingredeints list)
-
-You can an example on the Red Berry Tart recipe. 
-
-- [example Markdown](https://raw.githubusercontent.com/clarklab/chowdown/gh-pages/_recipes/red-berry-tart.md)
-- [example recipe page](http://chowdown.io/recipes/red-berry-tart.html)
+编译流程与命令
+1. 启动本地监听与热更新编译：
+```bash
+bundle exec jekyll serve --livereload
+npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch

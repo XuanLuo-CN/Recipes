@@ -1,31 +1,16 @@
-
-欢迎来到我的数字菜谱空间！这是一个专为高效录入、精致展示而设计的现代化个人菜谱微型系统。
-
+---
+layout: default
+title: About
+permalink: /about/
 ---
 
-### 🚀 核心黑科技：全自动 AI 烹饪管家
-本站最大的特色在于其**近乎零成本的录入体验**。当我想记录一道新菜时：
-1. 我只需要在一个普通的 Markdown 文件中输入**最核心的菜品做法和步骤**。
-2. 系统会自动调用 **Google Gemini 大语言模型** 进行全自动分析。
-3. **智能提取**：自动规范化生成精确的配料表（Ingredients）。
-4. **自动归类**：智能分析并打上跨维度的标签（Tags）。
-5. **视觉生成**：自动为这道菜量身定制并渲染出一张精美的插图。
+<div class="px-6 pt-6 select-none flex items-center text-xs text-stone-400 font-sans tracking-wide">
+  <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span>此页面更新于：{{ site.time | date: "%Y年%m月%d日" }}</span>
+</div>
 
-真正实现了“我只管做菜和记录，剩下的排版和设计全部交给 AI”。
-
----
-
-### 🛠️ 自定义增强功能（Custom Features）
-在原本极简的 Chowdown 模板基础上，我针对桌面端和移动端的实际烹饪场景，深度定制了以下功能：
-
-*   **📊 自动计数（Count）**：全站菜谱数量、分类标签实时统计，对自己的小中华小当家进度一目了然。
-*   **🔀 智能排序（Sort）**：支持多维度排序，快速捞出你想做的那道菜。
-*   **🎨 精致排版（Typography）**：针对中文字体、中英文混排以及烹饪步骤的间距进行了深度视觉优化。
-*   **🖼️ 便捷浮窗（Modal View）**：在主页点击菜品直接弹出精致的高性能浮窗展示详细信息，无需频繁切换和刷新页面。
-
----
-
-### 🏗️ 技术栈
-*   **Framework**: Jekyll (Ruby)
-*   **Theme**: Chowdown (Modified)
-*   **AI Engine**: Google Gemini (Flash / Pro)
+<div class="prose prose-stone max-w-none px-6 py-6 text-stone-800 text-sm leading-relaxed">
+  {% include_relative README.md %}
+</div>
