@@ -217,3 +217,21 @@ npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
       </div>
     </div>
   </div>
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+{::nomarkdown}
+
+<div class="prose max-w-3xl mx-auto mb-16">
+  </div>
+
+<div class="mb-8 mt-4 w-full">
+  </div>
+
+<div class="relative pl-6 border-l-2 border-stone-200/60 space-y-10 ml-4 mt-8">
+  </div>
+
+{:/nomarkdown}
