@@ -1,0 +1,144 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="content w-full md:w-4/5 h-full overflow-scroll">
+  <div class="recipes mb-24 py-8">
+    
+    <div class="px-6 mb-8 mt-2 w-full">
+      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-6 pb-6 px-6 shadow-sm w-full">
+        <h1 class="text-stone-800 text-2xl font-bold tracking-wider mb-4 font-gelica flex items-center gap-2">
+          <span class="total-badge bg-primary text-white text-sm px-2 py-0.5 rounded-md">FILTER</span> 
+          Explore by Tags
+        </h1>
+        
+        <div id="tag-container" class="flex flex-wrap gap-2.5">
+          <button data-tag="all" class="tag-btn bg-primary text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-150 tracking-wide cursor-pointer">
+            All Recipes
+          </button>
+
+          {% comment %} 提取并合并中英文 Tag {% endcomment %}
+          {% assign all_tags = "" | split: "," %}
+          {% for post in site.recipes %}
+            {% for tag_obj in post.tags %}
+              {% assign tag_str = tag_obj.en | append: "|||" | append: tag_obj.zh %}
+              {% assign all_tags = all_tags | push: tag_str %}
+            {% endfor %}
+          {% endfor %}
+          {% assign unique_tags = all_tags | uniq | sort %}
+
+          {% for tag_str in unique_tags %}
+            {% assign parts = tag_str | split: "|||" %}
+            {% assign tag_en = parts[0] %}
+            {% assign tag_zh = parts[1] %}
+            <button data-tag="{{ tag_en }}" class="tag-btn bg-stone-800 text-white hover:bg-stone-700 px-3 py-1 rounded-md text-sm font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5">
+              <span class="font-normal opacity-70">#{{ tag_en }}</span>
+              <span class="opacity-40 font-light">|</span>
+              <span>{{ tag_zh }}</span>
+            </button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+      .modal-scroll { will-change: transform; }
+      .modal-scroll::-webkit-scrollbar { width: 6px; }
+      .modal-scroll::-webkit-scrollbar-track { background: transparent; }
+      .modal-scroll::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+      .modal-scroll::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+      @media (hover: hover) {
+        .recipe-card:hover {
+          transform: scale(1.05) rotate(1deg);
+          transition: transform 150ms ease-in-out;
+        }
+      }
+    </style>
+
+    <div id="recipe-grid" class="grid px-6 h-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      {% assign sorted = site.recipes | sort:"date" | reverse %}
+      {% for post in sorted %}
+        
+        {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
+          {% continue %}
+        {% endif %}
+        
+        {% comment %} 把这道菜的 tag 英文名提取出来，用逗号连接，方便 JS 筛选 {% endcomment %}
+        {% assign tag_list = post.tags | map: 'en' | join: "," %}
+        
+        <div class="recipe-card transition cursor-pointer" 
+             data-tags="{{ tag_list }}" 
+             data-date="{{ post.date | date: '%Y-%m-%d' }}" 
+             data-title="{{ post.title | escape }}"
+             data-modal-id="modal-{{ post.url | slugify }}">
+          <a class="block recipe-main-link" href="{{ post.url | prepend: site.baseurl }}">
+            <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-2 bg-cover bg-center"
+                    {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
+            </canvas>
+            <div class="space-y-0.5 mt-1">
+              <h1 class="font-bold leading-tight text-stone-800 text-base">
+                {% if post.title_zh %}{{ post.title_zh }}{% else %}{{ post.title }}{% endif %}
+              </h1>
+              {% if post.title_en %}
+                <p class="text-xs text-stone-400 italic font-serif tracking-wide leading-tight truncate">
+                  {{ post.title_en }}
+                </p>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<div id="modals-layer">
+  {% for post in sorted %}
+    {% if post.url contains "bourbon-pecan-pie" or post.url contains "crockpot-buffalo-chicken" or post.url contains "herbed-lentil-soup" or post.url contains "honey-mustard-chicken" or post.url contains "perfect-drop-biscuits" or post.url contains "spicy-beef-chili" %}
+      {% continue %}
+    {% endif %}
+    
+    <div id="modal-{{ post.url | slugify }}" class="recipe-modal fixed inset-0 z-50 hidden bg-stone-900/40 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8 modal-scroll flex flex-col">
+        
+        <button class="btn-close-modal absolute top-4 right-4 text-stone-400 hover:text-stone-600 transition p-2 focus:outline-none cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        {% if post.image %}
+          <div class="aspect-video w-full rounded-xl bg-cover bg-center mb-6 flex-shrink-0" style="background-image:url({{ site.baseurl }}/images/{{ post.image }});"></div>
+        {% endif %}
+
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 font-gelica mb-2 pr-8">{{ post.title }}</h2>
+        
+        {% if post.tags %}
+          <div class="flex flex-wrap gap-2 mb-6 flex-shrink-0">
+            {% for tag_obj in post.tags %}
+              <a class="px-2.5 py-0.5 bg-stone-100/80 hover:bg-stone-200/80 border border-stone-200/40 rounded-md text-xs font-medium transition-colors duration-150 tracking-wide flex items-center gap-1.5" 
+                 href="{{ site.baseurl }}/tags/#{{ tag_obj.en }}">
+                <span class="text-stone-400 font-normal">#{{ tag_obj.en }}</span>
+                <span class="text-stone-300/60 select-none">|</span>
+                <span class="text-stone-600 font-semibold">{{ tag_obj.zh }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <div class="flex-1 text-stone-800 text-sm space-y-6">
+          
+          {% if post.ingredients %}
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-3 font-inter">Ingredients</h3>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 bg-stone-50/60 p-5 rounded-xl border border-stone-100">
+                {% for ingredient in post.ingredients %}
+                  <li class="flex items-center justify-between w-full text-stone-700 py-0.5 group">
+                    <div class="flex items-center flex-shrink-0 text-sm font-medium text-stone-800">
+                      <span class="text-primary/70 mr-2 font-mono text-xs">/</span>
+                      {% if ingredient.zh %}{{ ingredient.zh }}{% else %}{{ ingredient }}{% endif %}
+                    </div>
+                    <div class="flex-1 mx-2 border-b border-dashed border-stone-200/80 content-[''] h-3"></div>
+                    <div class="text-xs text-stone-400 italic font-serif flex-shrink-0 tracking-wide">
