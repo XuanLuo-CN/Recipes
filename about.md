@@ -1,7 +1,5 @@
 
 
-  <div class="prose max-w-3xl mx-auto mb-16" markdown="1">
-
 欢迎来到Xuan的数字菜谱！这是一个专为高效录入、精致展示而设计的现代化个人菜谱微型系统。
 
 
@@ -44,9 +42,6 @@ AI Engine: Google Gemini (Flash / Pro)
 ```bash
 bundle exec jekyll serve --livereload
 npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
-
-  </div>
-
 
   <div class="mb-8 mt-4 w-full">
     <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-5 px-5 shadow-sm w-full">
