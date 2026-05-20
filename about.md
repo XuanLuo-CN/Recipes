@@ -52,8 +52,8 @@ npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
     <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-5 px-5 shadow-sm w-full">
       <div class="flex items-start space-x-3 w-full">
         <div class="flex-shrink-0 mt-0.5">
-            <span class="total-badge" style="background-color: #f97316; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.75rem;">LOG</span>
-          </div>
+          <span class="total-badge">LOG</span>
+        </div>
         <div class="flex-1 w-full flex flex-col items-start justify-start">
           <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
             <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider text-left flex-shrink-0">
@@ -61,7 +61,7 @@ npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
             </span>
             <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
             <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
-              Changelog
+              Changelog & History
             </span>
           </div>
           <div class="flex items-center w-full mt-2 mb-2 px-1">
@@ -69,15 +69,9 @@ npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
             <div class="flex-grow h-px bg-stone-200/80 mx-3"></div>
             <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
           </div>
-          <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
-            <span class="text-xs text-stone-500 leading-relaxed pl-1 font-medium">
-                精进烹饪，沉淀代码
-            </span>
-            <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
-            <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
-              Cooking My Code...
-            </span>
-          </div>
+          <p class="text-xs text-stone-500 leading-relaxed pl-1 font-medium">
+            记录 <span class="italic font-bold text-primary font-serif">Xuan's Recipes</span> 从零到一的进化轨迹：精进烹饪，沉淀代码。
+          </p>
         </div>
       </div>
     </div>

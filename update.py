@@ -77,8 +77,8 @@ def generate_html_from_changelog():
     <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-5 px-5 shadow-sm w-full">
       <div class="flex items-start space-x-3 w-full">
         <div class="flex-shrink-0 mt-0.5">
-            <span class="total-badge" style="background-color: #f97316; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.75rem;">LOG</span>
-          </div>
+          <span class="total-badge">LOG</span>
+        </div>
         <div class="flex-1 w-full flex flex-col items-start justify-start">
           <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
             <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider text-left flex-shrink-0">
@@ -86,7 +86,7 @@ def generate_html_from_changelog():
             </span>
             <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
             <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
-              Changelog
+              Changelog & History
             </span>
           </div>
           <div class="flex items-center w-full mt-2 mb-2 px-1">
@@ -94,15 +94,9 @@ def generate_html_from_changelog():
             <div class="flex-grow h-px bg-stone-200/80 mx-3"></div>
             <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
           </div>
-          <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
-            <span class="text-xs text-stone-500 leading-relaxed pl-1 font-medium">
-                精进烹饪，沉淀代码
-            </span>
-            <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
-            <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
-              Cooking My Code...
-            </span>
-          </div>
+          <p class="text-xs text-stone-500 leading-relaxed pl-1 font-medium">
+            记录 <span class="italic font-bold text-primary font-serif">Xuan's Recipes</span> 从零到一的进化轨迹：精进烹饪，沉淀代码。
+          </p>
         </div>
       </div>
     </div>
@@ -174,15 +168,6 @@ def sync_to_about():
     if os.path.exists(README_PATH):
         with open(README_PATH, 'r', encoding='utf-8') as f:
             raw_readme = f.read().strip()
-            
-            # --- 核心修复：自动剥离 README 顶部的 Front Matter ---
-            if raw_readme.startswith('---'):
-                parts = raw_readme.split('---', 2)
-                if len(parts) >= 3:
-                    # 只保留第三个部分（也就是真正的正文）
-                    raw_readme = parts[2].strip()
-            # ----------------------------------------------------
-            
             readme_content = f'  \n  <div class="prose max-w-3xl mx-auto mb-16" markdown="1">\n\n{raw_readme}\n\n  </div>\n'
     else:
         print(f"⚠️ 警告：未找到 {README_PATH}")
@@ -212,11 +197,12 @@ def sync_to_about():
         if about_text.strip() != new_about_text.strip():
             with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
                 f.write(new_about_text)
-            print("⚡ 检测到内容更新，已成功将剥离后的 README 和 CHANGELOG 联合注入到 about.md！")
+            print("⚡ 检测到内容更新，已成功将 README 和 CHANGELOG 联合注入到 about.md！")
         else:
             print("✅ 检查完毕：about.md 内容已是最新，无需同步。")
     else:
         print("⚠️ 警告：在 about.md 中未找到标准的 ABOUT_CONTENT_START 和 END 锚点标记，注入终止。")
+
 
 if __name__ == '__main__':
     print("=== Xuan's Recipes 自动化维护助手 ===")
