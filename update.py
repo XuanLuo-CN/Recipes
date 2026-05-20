@@ -1,42 +1,34 @@
 import os
+import re
 
 # ================= 配置路径 =================
 RECIPES_DIR = './_recipes'
 IMAGES_DIR = './images'
+CHANGELOG_PATH = './CHANGELOG.md'
 README_PATH = './README.md'
 ABOUT_PATH = './about.md'
 
-# 常见图片格式后缀
 IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg')
 
 
 def check_missing_images():
     print(" 1. 开始检查菜谱图片...")
-    
-    # 1. 获取所有菜谱的文件名（不含后缀）
     recipes = set()
     if os.path.exists(RECIPES_DIR):
         for f in os.listdir(RECIPES_DIR):
             if f.endswith('.md'):
-                # 比如 'basil_beef.md' -> 'basil_beef'
                 recipes.add(os.path.splitext(f)[0])
     else:
         print(f"❌ 错误：未找到菜谱目录 {RECIPES_DIR}")
         return
 
-    # 2. 获取所有图片的文件名（不含后缀）
     images = set()
     if os.path.exists(IMAGES_DIR):
         for f in os.listdir(IMAGES_DIR):
             if f.lower().endswith(IMAGE_EXTENSIONS):
-                # 比如 'basil_beef.jpg' -> 'basil_beef'
                 images.add(os.path.splitext(f)[0])
-    else:
-        print(f"⚠️ 提示：未找到图片目录 {IMAGES_DIR}，将视所有菜谱为缺少图片。")
 
-    # 3. 对比找出没有图片的菜谱
     missing = recipes - images
-
     if missing:
         print("❌ 以下菜谱在 ./images 中没有找到同名图片：")
         for r in sorted(missing):
@@ -45,67 +37,180 @@ def check_missing_images():
         print("✅ 完美！所有菜谱均已配备对应图片。")
 
 
-def sync_readme_to_about():
-    print("\n 2. 开始检查 About 和 README 同步状态...")
+def generate_html_from_changelog():
+    """解析极简的 CHANGELOG.md 并生成华丽的 Tailwind HTML 时间轴"""
+    if not os.path.exists(CHANGELOG_PATH):
+        return ""
+
+    with open(CHANGELOG_PATH, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    entries = []
+    current_date = None
+    current_items = []
+
+    for line in lines:
+        line = line.strip()
+        if line.startswith('## '):
+            if current_date:
+                entries.append((current_date, current_items))
+            current_date = line[3:].strip()
+            current_items = []
+        elif line.startswith('- ') and current_date:
+            item_text = line[2:].strip()
+            if ':' in item_text or '：' in item_text:
+                separator = ':' if ':' in item_text else '：'
+                tag, desc = item_text.split(separator, 1)
+                current_items.append((tag.strip(), desc.strip()))
+            else:
+                current_items.append(("Updated", item_text))
     
-    if not os.path.exists(README_PATH):
-        print(f"❌ 错误：未找到根目录下的 {README_PATH}")
-        return
+    if current_date:
+        entries.append((current_date, current_items))
 
-    # 读取 README 内容
-    with open(README_PATH, 'r', encoding='utf-8') as f:
-        readme_content = f.read().strip()
+    if not entries:
+        return ""
 
-    # 如果 about.md 还不存在，直接新建一个默认模版
-    if not os.path.exists(ABOUT_PATH):
-        print(f"📝 未找到 about.md，正在自动创建...")
-        default_about = f'---\nlayout: default\ntitle: About\npermalink: /about/\n---\n\n<div class="prose max-w-3xl mx-auto px-6 py-12" markdown="1">\n\n{readme_content}\n\n</div>\n'
-        with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
-            f.write(default_about)
-        print("✅ about.md 已创建并同步了 README 内容！")
-        return
+    html_parts = []
+    html_parts.append('''
+  <div class="mb-8 mt-4 w-full">
+    <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-5 px-5 shadow-sm w-full">
+      <div class="flex items-start space-x-3 w-full">
+        <div class="flex-shrink-0 mt-0.5">
+            <span class="total-badge" style="background-color: #f97316; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.75rem;">LOG</span>
+          </div>
+        <div class="flex-1 w-full flex flex-col items-start justify-start">
+          <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
+            <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider text-left flex-shrink-0">
+              更新日志
+            </span>
+            <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
+            <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
+              Changelog
+            </span>
+          </div>
+          <div class="flex items-center w-full mt-2 mb-2 px-1">
+            <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+            <div class="flex-grow h-px bg-stone-200/80 mx-3"></div>
+            <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
+            <span class="text-xs text-stone-500 leading-relaxed pl-1 font-medium">
+                精进烹饪，沉淀代码
+            </span>
+            <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
+            <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
+              Cooking My Code...
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="relative pl-6 border-l-2 border-stone-200/60 space-y-10 ml-4 mt-8">
+''')
 
-    # 读取现有的 about.md
-    with open(ABOUT_PATH, 'r', encoding='utf-8') as f:
-        about_lines = f.readlines()
-
-    # 寻找 <div> 的开头和 </div> 的结尾
-    start_idx = -1
-    end_idx = -1
-    for i, line in enumerate(about_lines):
-        if '<div' in line and 'markdown="1"' in line:
-            start_idx = i
-        if '</div>' in line:
-            end_idx = i
-
-    # 如果找到了合法的 HTML 标签包裹圈
-    if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
-        # 提取保留的头部（Front Matter 和 <div> 标签行）
-        header = "".join(about_lines[:start_idx + 1])
-        # 提取保留的尾部（</div> 标签及之后的内容）
-        footer = "".join(about_lines[end_idx:])
-
-        # 拼接出期望的新文件内容
-        new_about_content = f"{header}\n{readme_content}\n\n{footer}"
-
-        # 读取当前完整的 about.md 做对比
-        with open(ABOUT_PATH, 'r', encoding='utf-8') as f:
-            current_about_content = f.read()
-
-        # 检查是否一致
-        if current_about_content.strip() != new_about_content.strip():
-            with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
-                f.write(new_about_content)
-            print("⚡ 检测到内容有差异，已成功把 README 更新到 about.md 的容器中！")
+    for index, (date_str, items) in enumerate(entries):
+        is_latest = (index == 0)
+        is_oldest = (index == len(entries) - 1)
+        
+        if is_latest:
+            dot_style = "bg-primary animate-pulse"
+        elif is_oldest:
+            dot_style = "bg-stone-800"
         else:
-            print("✅ 检查完毕：about.md 的内容与 README 完全一致，无需更新。")
-    else:
-        print("⚠️ 警告：在 about.md 中没找到标准的 <div ... markdown=\"1\"> 或 </div> 标签结构！")
-        print("为了安全起见，本次未覆盖。请确保 about.md 里包含这两行标签。")
+            dot_style = "bg-stone-400"
 
+        html_parts.append(f'''
+    <div class="relative">
+      <span class="absolute -left-[31px] top-1.5 {dot_style} w-3 h-3 rounded-full border-2 border-white shadow-sm"></span>
+      <div class="flex flex-col gap-1.5">
+        <div class="flex items-baseline gap-2">
+          <h3 class="text-lg font-bold text-stone-800">{date_str}</h3>
+          { '<span class="text-xs text-stone-400 italic font-serif">Latest</span>' if is_latest else '' }
+        </div>
+        <ul class="list-none pl-0 space-y-2 text-stone-600 text-sm">''')
+        
+        for tag, desc in items:
+            tag_color = "text-stone-600"
+            if tag in ["Added", "✨ 新增"]: 
+                tag_color = "text-primary"
+            elif tag in ["Fixed", "🐛 修复"]: 
+                tag_color = "text-amber-600"
+            elif tag in ["Infrastructure", "⚙️ 环境"]: 
+                tag_color = "text-emerald-600"
+            elif tag in ["Localization", "🌐 翻译"]: 
+                tag_color = "text-blue-600"
+            elif tag in ["Refactored", "Changed", "🎨 重构", "🎨 优化"]: 
+                tag_color = "text-purple-600"
+            elif tag in ["Automation", "🤖 智能"]: 
+                tag_color = "text-indigo-600"
+
+            html_parts.append(f'''
+          <li class="flex items-start gap-2">
+            <span class="{tag_color} font-bold flex-shrink-0">{tag}:</span>
+            <span>{desc}</span>
+          </li>''')
+            
+        html_parts.append('''
+        </ul>
+      </div>
+    </div>''')
+
+    html_parts.append('\n  </div>')
+    return "".join(html_parts)
+
+
+def sync_to_about():
+    print("\n 2. 开始整合 README 和 CHANGELOG 并同步到 about.md...")
+    
+    if not os.path.exists(ABOUT_PATH):
+        print(f"❌ 错误：未找到 {ABOUT_PATH}")
+        return
+
+    # 1. 准备新内容
+    readme_content = ""
+    if os.path.exists(README_PATH):
+        with open(README_PATH, 'r', encoding='utf-8') as f:
+            raw_readme = f.read().strip()
+            if raw_readme.startswith('---'):
+                parts = raw_readme.split('---', 2)
+                if len(parts) >= 3: raw_readme = parts[2].strip()
+            readme_content = f'\n  <div class="prose max-w-3xl mx-auto mb-16" markdown="1">\n\n{raw_readme}\n\n  </div>\n'
+    
+    changelog_html = generate_html_from_changelog()
+    new_data = f"\n{readme_content}\n{changelog_html}\n"
+
+    # 2. 读取当前文件
+    with open(ABOUT_PATH, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # 3. 使用正则直接“切开”文件，不再依赖 .split() 的精确字符串匹配
+    # 这会匹配所有的 HTML 注释，即使中间有空格或换行
+    pattern = r"()(.*?)()"
+    
+    if not re.search(pattern, content, re.DOTALL):
+        print("⚠️ 警告：未找到锚点标记，请检查 about.md 是否包含 和 END 标签。")
+        return
+
+    # 4. 重新组装内容
+    # 使用 re.sub 进行替换，确保只保留锚点外围的骨架
+    final_content = re.sub(
+        pattern, 
+        r"\1" + new_data + r"\3", 
+        content, 
+        flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # 5. 写入
+    with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
+        f.write(final_content)
+    
+    print("✅ 同步完成！已使用正则重置锚点内容，完美解决拼接错误。")
 
 if __name__ == '__main__':
-    print("=== Chowdown 菜谱主页维护助手 ===")
+    print("=== Xuan's Recipes 自动化维护助手 ===")
     check_missing_images()
-    sync_readme_to_about()
-    print("=================================")
+    sync_to_about()
+    print("====================================")

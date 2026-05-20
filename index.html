@@ -54,8 +54,12 @@ layout: default
                       Date
                     </button>
                     <span class="text-stone-300">/</span>
-                    <button id="btn-sort-pinyin" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
-                      Alpha
+                    <button id="btn-sort-zh" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
+                      ZH
+                    </button>
+                    <span class="text-stone-300">/</span>
+                    <button id="btn-sort-en" class="focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer">
+                      EN
                     </button>
                   </div>
                 </div>
@@ -98,9 +102,10 @@ layout: default
         {% endif %}
         
         <div class="recipe-card transition cursor-pointer" 
-             data-date="{{ post.date | date: '%Y-%m-%d' }}" 
-             data-title="{{ post.title | escape }}"
-             data-modal-id="modal-{{ post.url | slugify }}">
+          data-date="{{ post.date | date: '%Y-%m-%d' }}" 
+          data-title="{% if post.title_zh %}{{ post.title_zh | escape }}{% else %}{{ post.title | escape }}{% endif %}"
+          data-title-en="{% if post.title_en %}{{ post.title_en | escape }}{% else %}{{ post.title | escape }}{% endif %}"
+          data-modal-id="modal-{{ post.url | slugify }}">
           <a class="block recipe-main-link" href="{{ post.url | prepend: site.baseurl }}">
             <canvas class="aspect-video w-full rounded-xl bg-gray-100 mb-2 bg-cover bg-center"
                     {% if post.image %} style="background-image:url({{ site.baseurl }}/images/{{ post.image }});" {% endif %}>
@@ -245,24 +250,42 @@ layout: default
     const numDisplay = document.querySelector('.handwritten-num');
     if (numDisplay) { numDisplay.textContent = cards.length; }
 
+    // --- 排序功能 ---
     const btnRecent = document.getElementById('btn-sort-recent');
-    const btnPinyin = document.getElementById('btn-sort-pinyin');
+    const btnZh = document.getElementById('btn-sort-zh');
+    const btnEn = document.getElementById('btn-sort-en');
+
+    // 统一定义激活和未激活的样式，方便后续切换
+    const activeClass = "focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer";
+    const inactiveClass = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer";
 
     function updateSort(sortBy) {
+      // 1. 先把所有按钮都变成灰色的未激活状态
+      btnRecent.className = inactiveClass;
+      btnZh.className = inactiveClass;
+      btnEn.className = inactiveClass;
+
+      // 2. 根据选项重新排序，并把对应的按钮变红
       if (sortBy === 'recent') {
         cards.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
-        btnRecent.className = "focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer";
-        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer";
-      } else if (sortBy === 'pinyin') {
-        cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh'));
-        btnPinyin.className = "focus:outline-none transition-colors duration-150 text-primary font-semibold cursor-pointer";
-        btnRecent.className = "focus:outline-none transition-colors duration-150 text-stone-400 hover:text-primary cursor-pointer";
+        btnRecent.className = activeClass;
+      } else if (sortBy === 'zh') {
+        cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title, 'zh-CN'));
+        btnZh.className = activeClass;
+      } else if (sortBy === 'en') {
+        // 使用新加的 data-title-en 进行英文字母排序
+        cards.sort((a, b) => a.dataset.titleEn.localeCompare(b.dataset.titleEn, 'en-US'));
+        btnEn.className = activeClass;
       }
+      
+      // 3. 把排好序的卡片重新塞回网格里
       cards.forEach(card => grid.appendChild(card));
     }
 
+    // 绑定三个按钮的点击事件
     btnRecent.addEventListener('click', () => updateSort('recent'));
-    btnPinyin.addEventListener('click', () => updateSort('pinyin'));
+    btnZh.addEventListener('click', () => updateSort('zh'));
+    btnEn.addEventListener('click', () => updateSort('en'));
     
     grid.addEventListener('click', function (e) {
       const card = e.target.closest('.recipe-card');
