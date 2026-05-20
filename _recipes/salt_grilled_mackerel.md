@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "盐烤青花鱼"
 title_en: "Salt Grilled Mackerel"
+date: 2026-02-05
 image: salt_grilled_mackerel.png
 
 tags:

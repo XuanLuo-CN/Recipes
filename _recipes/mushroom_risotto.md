@@ -2,11 +2,12 @@
 layout: recipe
 title_zh: "菌菇烩饭"
 title_en: "Mushroom Risotto"
+date: 2025-12-30
 image: mushroom_risotto.png
 
 tags:
 - zh: "素菜"
-  en: "Vegetable"
+  en: "Vege"
 
 ingredients:
 - zh: "菌菇"

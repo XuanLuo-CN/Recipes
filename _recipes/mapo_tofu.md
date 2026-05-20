@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "麻婆豆腐"
 title_en: "Mapo Tofu"
+date: 2026-04-10
 image: Mapo_tofu.png
 
 tags:

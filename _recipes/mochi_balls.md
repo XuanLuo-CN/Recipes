@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "糯米小丸子"
 title_en: "Mochi Balls"
+date: 2025-10-18
 image: Mochi_balls.png
 
 tags:

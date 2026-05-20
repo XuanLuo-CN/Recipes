@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "葱爆羊肉"
 title_en: "Stir-fried Lamb with Scallions"
+date: 2026-03-02
 image: Lamb_with_scallions.png
 
 tags:

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "炒芥兰"
 title_en: "Stir-fried Gai Lan (Chinese Broccoli)"
+date: 2026-03-27
 image: gai_lan.png
 tags:
 - zh: "素菜"

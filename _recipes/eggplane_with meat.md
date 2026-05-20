@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "肉末茄子"
 title_en: "Eggplant with Minced Meat"
+date: 2026-05-10
 image: eggplane with meat.jpg
 
 tags: 

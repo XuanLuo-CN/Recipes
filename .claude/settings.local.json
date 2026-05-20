@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(Add-Content *)"
+      "Bash(Add-Content *)",
+      "Bash(New-Item *)",
+      "Bash(python3 *)",
+      "PowerShell(python .\\\\add_random_dates.py)"
     ]
   }
 }

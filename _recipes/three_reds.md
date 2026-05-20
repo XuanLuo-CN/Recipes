@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "红三剁"
 title_en: "Three Reds Stir-fry"
+date: 2026-03-25
 image: pace-pork.jpg
 
 tags:

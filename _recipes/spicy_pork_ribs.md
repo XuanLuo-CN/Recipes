@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "江西辣排骨"
 title_en: "Jiangxi Spicy Pork Ribs"
+date: 2026-04-15
 image: Spicy_pork_ribs.png
 
 tags:

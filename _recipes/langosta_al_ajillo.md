@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "蒜香黄油龙虾"
 title_en: "Garlic Butter Lobster"
+date: 2026-03-01
 image: langosta_al_ajillo.png
 
 tags:

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "苦瓜酸菜炒饭"
 title_en: "Bitter Melon and Pickled Cabbage Fried Rice"
+date: 2026-04-25
 image: Bitter_melon_rice.png
 
 tags:

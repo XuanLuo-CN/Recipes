@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "回锅肉"
 title_en: "Twice Cooked Pork"
+date: 2026-04-18
 image: twice_cooked_pork.png
 
 tags:

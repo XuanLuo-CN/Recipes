@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "韭菜炒豆芽"
 title_en: "Stir-fried Chives and Bean Sprouts"
+date: 2026-02-15
 image: Chives_and_bean_sprouts.png
 
 tags:

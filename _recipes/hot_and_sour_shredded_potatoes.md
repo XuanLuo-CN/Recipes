@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "酸辣土豆丝"
 title_en: "Hot and Sour Shredded Potatoes"
+date: 2025-10-01
 image: hot_and_sour_shredded_potatoes.png
 
 tags:

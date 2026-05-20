@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "打抛饭"
 title_en: "Pad Krapow Rice"
+date: 2026-03-20
 image: basil_rice.png
 
 tags:

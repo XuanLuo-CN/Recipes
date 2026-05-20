@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "菠萝牛肉粒"
 title_en: "Pineapple Steak Bites"
+date: 2026-05-05
 image: Pineapple_steak.png
 
 tags:

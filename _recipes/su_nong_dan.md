@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "韩式牛肋骨"
 title_en: "Korean Braised Short Ribs (Galbi Jjim)"
+date: 2025-09-28
 image: Su_nong_dan.jpg
 
 tags:

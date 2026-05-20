@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "萝卜牛腩"
 title_en: "Beef Brisket with Turnips"
+date: 2026-01-01
 image: Beef_and_carrot.png
 imagecredit: https://www.today.com/today/amp/tdna199419
 

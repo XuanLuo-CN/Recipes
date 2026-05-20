@@ -2,11 +2,12 @@
 layout: recipe
 title_zh: "韩杏意面"
 title_en: "Korean King Oyster Mushroom Pasta"
+date: 2026-05-04
 image: korean_pasta.png
 
 tags:
 - zh: "素菜"
-  en: "Vegetable"
+  en: "Vege"
 
 ingredients:
 - zh: "杏鲍菇"

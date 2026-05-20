@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "黑椒牛仔骨"
 title_en: "Black Pepper Beef Short Ribs"
+date: 2026-04-07
 image: Pepper_beef_short_ribs.jpg
 
 tags:

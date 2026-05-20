@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "椰子鸡"
 title_en: "Coconut Chicken"
+date: 2026-01-15
 image: Coconut_chicken.png
 imagecredit: https://flic.kr/p/7HZmzn
 

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "反向法牛排"
 title_en: "Reverse Sear Steak"
+date: 2026-04-01
 image: Reverse_sear_steak.png
 
 tags:

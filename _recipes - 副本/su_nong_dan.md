@@ -1,0 +1,62 @@
+---
+layout: recipe
+title_zh: "韩式牛肋骨"
+title_en: "Korean Braised Short Ribs (Galbi Jjim)"
+image: Su_nong_dan.jpg
+
+tags:
+- en: Beef
+  zh: "牛肉"
+    
+ingredients:
+- zh: "牛肋骨"
+  en: "Beef Short Ribs"
+- zh: "苹果"
+  en: "Apple"
+- zh: "梨"
+  en: "Pear"
+- zh: "洋葱"
+  en: "Onion"
+- zh: "姜"
+  en: "Ginger"
+- zh: "蒜"
+  en: "Garlic"
+- zh: "韩式酱"
+  en: "Korean Sauce"
+- zh: "酱油"
+  en: "Soy Sauce"
+- zh: "味淋"
+  en: "Mirin"
+- zh: "蜂蜜"
+  en: "Honey"
+- zh: "辣椒面"
+  en: "Chili Powder"
+- zh: "胡椒粉"
+  en: "Pepper"
+- zh: "香油"
+  en: "Sesame Oil"
+- zh: "土豆"
+  en: "Potatoes"
+- zh: "胡萝卜"
+  en: "Carrots"
+- zh: "盐"
+  en: "Salt"
+- zh: "芝士"
+  en: "Cheese"
+- zh: "芝麻"
+  en: "Sesame Seeds"
+
+directions:
+- zh: "牛肋骨焯水，煎至两面上色"
+  en: "Blanch beef short ribs, then sear until browned on both sides."
+- zh: "一个苹果、一个梨、一个洋葱、半块姜、六瓣蒜搅碎"
+  en: "Blend one apple, one pear, one onion, half a piece of ginger, and six cloves of garlic."
+- zh: "果泥加两大勺韩式辣酱、两大勺酱油、一勺味淋、一勺蜂蜜、辣椒面"
+  en: "Add two large spoons of Korean chili paste, two large spoons of soy sauce, one spoon of mirin, one spoon of honey, and chili powder to the fruit puree."
+- zh: "全部材料，加胡椒粉、香油进高压锅压25min"
+  en: "Combine all ingredients, add pepper and sesame oil, and pressure cook for 25 minutes."
+- zh: "加入土豆、胡萝卜煮熟"
+  en: "Add potatoes and carrots, cook until tender."
+- zh: "用盐调味撒芝士和芝麻，完成"
+  en: "Season with salt, sprinkle with cheese and sesame seeds, and serve."
+---

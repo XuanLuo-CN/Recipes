@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "柠檬手撕鸡"
 title_en: "Lemon Shredded Chicken"
+date: 2025-10-23
 image: lemon_chicken.png
 
 tags:

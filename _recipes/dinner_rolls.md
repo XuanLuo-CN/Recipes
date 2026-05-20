@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "小餐包"
 title_en: "Dinner Rolls"
+date: 2025-10-30
 image: Dinner_rolls.png
 
 tags:

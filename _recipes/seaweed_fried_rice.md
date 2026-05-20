@@ -2,11 +2,14 @@
 layout: recipe
 title_zh: "海苔炒饭"
 title_en: "Seaweed Fried Rice"
+date: 2026-05-15
 image: seaweed_fried_rice.png
 
 tags:
-- en: Vege
-  zh: "素食"
+- en: Pork
+  zh: "猪肉"
+- en: Beef
+  zh: "牛肉"
 
 ingredients:
 - zh: "海苔"
@@ -29,6 +32,8 @@ ingredients:
   en: "Dark Soy Sauce"
 - zh: "耗油"
   en: "Oyster Sauce"
+- zh: "肉末"
+  en: "Ground Meat"
 
 directions:
 - zh: "起锅少油，一张海苔煸脆"

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "葱盐牛肉"
 title_en: "Beef with Negishio Sauce"
+date: 2026-02-20
 image: Beef_with_negishio_sauce.png
 
 tags:

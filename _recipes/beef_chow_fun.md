@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "干炒牛河"
 title_en: "Beef Chow Fun"
+date: 2026-01-28
 image: Beef_chow_fun.png
 
 tags:

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "老奶洋芋"
 title_en: "Old Ma's Mashed Potatoes"
+date: 2025-12-10
 image: oldma_potato.png
 imagecredit: https://flic.kr/p/8ANQTc
 

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "油浸小番茄"
 title_en: "Oil-Marinated Cherry Tomatoes"
+date: 2025-11-08
 image: Oil_tomatos.png
 
 tags:

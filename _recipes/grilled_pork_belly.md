@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "烤五花肉"
 title_en: "Grilled Pork Belly"
+date: 2026-04-20
 image: grilled_pork_belly.png
 
 tags:

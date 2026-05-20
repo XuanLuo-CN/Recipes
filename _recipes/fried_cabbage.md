@@ -1,12 +1,13 @@
 ---
 layout: recipe
 title_zh: "手撕包菜"
-title_en: "Hand-Shredded Cabbage"
+title_en: "Fried Cabbage"
+date: 2026-02-27
 image: fried_cabbage.png
 
 tags:
 - zh: "素菜"
-  en: "Vegetable"
+  en: "Vege"
 
 ingredients:
 - zh: "包菜"

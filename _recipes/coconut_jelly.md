@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "椰冻"
 title_en: "Coconut Jelly"
+date: 2025-10-26
 image: Coconut_jelly.jpg
 
 tags:

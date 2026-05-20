@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "奶油鸡肉蘑菇意面"
 title_en: "Creamy Chicken and Mushroom Pasta"
+date: 2025-11-24
 image: Creamy_mushroom_pasta.jpg
 
 tags:

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "饺子"
 title_en: "Dumplings"
+date: 2025-09-25
 image: Dumpling.png
 
 tags:

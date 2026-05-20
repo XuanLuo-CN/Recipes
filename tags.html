@@ -8,42 +8,66 @@ permalink: /tags/
   <div class="recipes mb-24 py-8">
     
     <div class="px-6 mb-8 mt-2 w-full">
-      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-6 pb-6 px-6 shadow-sm w-full">
-        <h1 class="text-stone-800 text-2xl font-bold tracking-wider mb-4 font-gelica flex items-center gap-2">
-          <span class="total-badge bg-primary text-white text-sm px-2 py-0.5 rounded-md">FILTER</span> 
-          Explore by Tags
-        </h1>
+      <div class="bg-stone-50/60 border border-stone-200/80 rounded-2xl pt-5 pb-5 px-5 shadow-sm w-full">
         
-        <div id="tag-container" class="flex flex-wrap gap-2.5">
-          <button data-tag="all" class="tag-btn bg-primary text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-150 tracking-wide cursor-pointer">
-            All Recipes
-          </button>
+        <div class="flex items-start space-x-3 w-full">
+          <div class="flex-shrink-0 mt-0.5">
+            <span class="total-badge">FILTER</span>
+          </div>
+          
+          <div class="flex-1 w-full flex flex-col items-start justify-start">
+            
+            <div class="flex flex-col md:flex-row md:items-baseline w-full gap-y-1">
+              <span class="text-stone-800 text-xl sm:text-2xl font-bold tracking-wider text-left flex-shrink-0">
+                菜品分类
+              </span>
+              <span class="text-primary/40 text-xs hidden md:block select-none text-center px-4">/</span>
+              <span class="text-stone-400 text-xs italic font-serif tracking-wide block text-left">
+                Explore by Tags
+              </span>
+            </div>
+            
+            <div class="flex items-center w-full mt-2 mb-4 px-1">
+              <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+              <div class="flex-grow h-px bg-stone-200/80 mx-3"></div>
+              <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+            </div>
+            
+            <div id="tag-container" class="flex flex-wrap gap-2 w-full">
+              <button data-tag="all" class="tag-btn px-2.5 py-0.5 bg-primary text-white border border-primary rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5">
+                All Recipes
+              </button>
 
-          {% assign all_tags = "" | split: "," %}
-          {% for post in site.recipes %}
-            {% for tag_obj in post.tags %}
-              {% assign tag_str = tag_obj.en | append: "|||" | append: tag_obj.zh %}
-              {% assign all_tags = all_tags | push: tag_str %}
-            {% endfor %}
-          {% endfor %}
-          {% assign unique_tags = all_tags | uniq | sort %}
+              {% assign all_tags = "" | split: "," %}
+              {% for post in site.recipes %}
+                {% for tag_obj in post.tags %}
+                  {% assign tag_str = tag_obj.en | append: "|||" | append: tag_obj.zh %}
+                  {% assign all_tags = all_tags | push: tag_str %}
+                {% endfor %}
+              {% endfor %}
+              {% assign unique_tags = all_tags | uniq | sort %}
 
-          {% for tag_str in unique_tags %}
-            {% assign parts = tag_str | split: "|||" %}
-            {% assign tag_en = parts[0] %}
-            {% assign tag_zh = parts[1] %}
-            <button data-tag="{{ tag_en }}" class="tag-btn bg-stone-800 text-white hover:bg-stone-700 px-3 py-1 rounded-md text-sm font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5">
-              <span class="font-normal opacity-70">#{{ tag_en }}</span>
-              <span class="opacity-40 font-light">|</span>
-              <span>{{ tag_zh }}</span>
-            </button>
-          {% endfor %}
+              {% for tag_str in unique_tags %}
+                {% assign parts = tag_str | split: "|||" %}
+                {% assign tag_en = parts[0] %}
+                {% assign tag_zh = parts[1] %}
+                <button data-tag="{{ tag_en }}" class="tag-btn px-2.5 py-0.5 bg-stone-100/80 hover:bg-stone-200/80 text-stone-600 border border-stone-200/40 rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5">
+                  <span class="text-stone-400 font-normal">#{{ tag_en }}</span>
+                  <span class="text-stone-300/60 select-none">|</span>
+                  <span class="text-stone-600 font-semibold">{{ tag_zh }}</span>
+                </button>
+              {% endfor %}
+            </div>
+            
+          </div>
         </div>
+
       </div>
     </div>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+      .total-badge { background: #F53200; color: white; font-size: 13px; padding: 3px 8px; border-radius: 6px; font-weight: bold; vertical-align: middle; }
       .modal-scroll { will-change: transform; }
       .modal-scroll::-webkit-scrollbar { width: 6px; }
       .modal-scroll::-webkit-scrollbar-track { background: transparent; }
@@ -193,15 +217,30 @@ permalink: /tags/
     // 处理 Tag 点击筛选功能
     tagBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // 1. 让所有按钮变回黑底
+        // 1. 让所有按钮恢复成未选中的灰底状态
         tagBtns.forEach(b => {
-          b.classList.remove('bg-primary');
-          b.classList.add('bg-stone-800');
+          b.className = "tag-btn px-2.5 py-0.5 bg-stone-100/80 hover:bg-stone-200/80 text-stone-600 border border-stone-200/40 rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
+          
+          // 如果是生成的 Tag 按钮，需要重置内部 span 的颜色
+          const spanEn = b.querySelector('.text-stone-100\\/70');
+          const spanDivider = b.querySelector('.text-white\\/40');
+          const spanZh = b.querySelector('.text-white');
+          if(spanEn) spanEn.className = "text-stone-400 font-normal";
+          if(spanDivider) spanDivider.className = "text-stone-300/60 select-none";
+          if(spanZh) spanZh.className = "text-stone-600 font-semibold";
         });
         
-        // 2. 让当前点击的按钮变成红底
-        btn.classList.remove('bg-stone-800');
-        btn.classList.add('bg-primary');
+        // 2. 让当前点击的按钮变成红色选中状态
+        btn.className = "tag-btn px-2.5 py-0.5 bg-primary text-white border border-primary rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
+        
+        // 修改当前选中的 Tag 按钮内部文字颜色为白色
+        const activeSpanEn = btn.querySelector('span:nth-child(1)');
+        const activeSpanDivider = btn.querySelector('span:nth-child(2)');
+        const activeSpanZh = btn.querySelector('span:nth-child(3)');
+        if (activeSpanEn) activeSpanEn.className = "text-stone-100/70 font-normal";
+        if (activeSpanDivider) activeSpanDivider.className = "text-white/40 select-none";
+        if (activeSpanZh) activeSpanZh.className = "text-white font-semibold";
+
 
         // 3. 执行菜品筛选
         const selectedTag = btn.dataset.tag;

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "葱烧牛肋条"
 title_en: "Scallion Braised Beef Short Ribs"
+date: 2026-02-15
 image: short_ribs_with_scallion.jpg
 
 tags:

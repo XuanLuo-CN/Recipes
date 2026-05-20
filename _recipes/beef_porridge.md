@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "沙茶牛肉粥"
 title_en: "Satay Beef Congee"
+date: 2026-04-03
 image: Beef_porridge.png
 
 tags:

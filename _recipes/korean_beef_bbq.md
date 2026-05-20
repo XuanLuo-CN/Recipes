@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "韩式烤牛肉"
 title_en: "Korean Beef BBQ"
+date: 2025-12-16
 image: korean_beef_bbq.png
 tags:
   - zh: "牛肉"

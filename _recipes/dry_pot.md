@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "干锅鸡翅"
 title_en: "Dry Pot Chicken Wings"
+date: 2026-03-12
 image: jalapeno-cornbread.jpg
 
 tags:

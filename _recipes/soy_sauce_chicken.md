@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "玫瑰豉油鸡"
 title_en: "Rose Scented Soy Sauce Chicken"
+date: 2026-03-03
 image: Soy_sauce_chicken.png
 
 tags:

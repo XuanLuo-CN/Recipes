@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "农家一碗香"
 title_en: "Farmhouse Bowl (Nong Jia Yi Wan Xiang)"
+date: 2026-03-05
 image: farmhouse_bowl.png
 
 tags:

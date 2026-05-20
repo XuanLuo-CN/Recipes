@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "罐焖牛肉"
 title_en: "Pot Braised Beef"
+date: 2026-03-28
 image: Pot_braised_beef.jpg
 
 tags:

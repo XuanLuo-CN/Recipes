@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "酿豆腐"
 title_en: "Stuffed Tofu"
+date: 2026-01-08
 image: Stuffed_tofu.png
 
 tags:

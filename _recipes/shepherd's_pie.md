@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "牧羊人派"
 title_en: "Shepherd's Pie"
+date: 2026-05-15
 image: Shepherd's_pie.jpg
 
 tags:

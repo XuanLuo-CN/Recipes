@@ -1,0 +1,58 @@
+---
+layout: recipe
+title_zh: "农家一碗香"
+title_en: "Farmhouse Bowl (Nong Jia Yi Wan Xiang)"
+image: farmhouse_bowl.png
+
+tags:
+- zh: "猪肉"
+  en: "Pork"
+
+ingredients:
+- zh: "五花肉"
+  en: "Pork Belly"
+- zh: "鸡蛋"
+  en: "Eggs"
+- zh: "豆豉"
+  en: "Fermented Black Beans"
+- zh: "螺丝椒"
+  en: "Twist Peppers"
+- zh: "小米辣"
+  en: "Bird's Eye Chilies"
+- zh: "姜"
+  en: "Ginger"
+- zh: "蒜"
+  en: "Garlic"
+- zh: "大葱"
+  en: "Leek/Scallion"
+- zh: "生抽"
+  en: "Light Soy Sauce"
+- zh: "老抽"
+  en: "Dark Soy Sauce"
+- zh: "蚝油"
+  en: "Oyster Sauce"
+- zh: "白糖"
+  en: "Sugar"
+- zh: "鸡精"
+  en: "Chicken Bouillon"
+
+directions:
+- zh: "螺丝椒去籽切片，小米辣斜切"
+  en: "Deseed and slice twist peppers, diagonally slice bird's eye chilies."
+- zh: "姜蒜切片，大葱切成花"
+  en: "Slice ginger and garlic, cut leek into decorative pieces."
+- zh: "豆豉切碎"
+  en: "Chop fermented black beans."
+- zh: "起锅，螺丝椒煸香至有焦斑，盛出备用"
+  en: "Heat wok, stir-fry twist peppers until fragrant with charred spots, set aside."
+- zh: "打入四个鸡蛋，把蛋黄打散一点，煎熟备用"
+  en: "Crack four eggs, slightly break up yolks, fry until cooked, set aside."
+- zh: "加入五花肉煸熟，加入葱姜蒜小米辣豆豉，煸香"
+  en: "Add pork belly and stir-fry until cooked. Add scallions, ginger, garlic, bird's eye chilies, and fermented black beans, stir-fry until fragrant."
+- zh: "加入辣椒，沿着锅边淋入20ml生抽，3ml老抽"
+  en: "Add peppers, drizzle in 20ml light soy sauce and 3ml dark soy sauce along the edge of the wok."
+- zh: "加入10g蚝油，3g白糖，鸡精2g"
+  en: "Add 10g oyster sauce, 3g sugar, and 2g chicken bouillon."
+- zh: "鸡蛋回锅，完成"
+  en: "Return eggs to the wok. Serve."
+---

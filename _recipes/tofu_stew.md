@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "辣豆腐汤"
 title_en: "Spicy Tofu Stew"
+date: 2026-05-01
 image: tofu_stew.png
 
 tags:

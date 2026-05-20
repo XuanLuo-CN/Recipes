@@ -140,7 +140,17 @@ layout: default
           <div class="aspect-video w-full rounded-xl bg-cover bg-center mb-6 flex-shrink-0" style="background-image:url({{ site.baseurl }}/images/{{ post.image }});"></div>
         {% endif %}
 
-        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 font-gelica mb-2 pr-8">{{ post.title }}</h2>
+        <div class="mb-5 pr-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 font-gelica leading-tight">
+            {% if post.title_zh %}{{ post.title_zh }}{% else %}{{ post.title }}{% endif %}
+          </h2>
+          
+          {% if post.title_en %}
+            <div class="mt-2">
+              <h3 class="text-sm sm:text-base text-stone-400 italic font-serif tracking-wide">{{ post.title_en }}</h3>
+            </div>
+          {% endif %}
+        </div>
         
         {% if post.tags %}
           <div class="flex flex-wrap gap-2 mb-6 flex-shrink-0">
@@ -203,10 +213,22 @@ layout: default
           {% endif %}
 
           {% if post.content and post.content != "" and post.content != "steak" %}
-            <div class="border-t border-stone-100 pt-5 mt-4 text-stone-600 italic leading-relaxed">
-              {{ post.content }}
-            </div>
-          {% endif %}
+          <div class="pt-2 mt-2 text-stone-600 italic leading-relaxed">
+            {{ post.content }}
+          </div>
+        {% endif %}
+
+        <div class="flex items-center w-full mt-10 mb-4 px-1 opacity-70">
+          <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+          <div class="flex-grow h-px bg-stone-200/80 mx-3"></div>
+          <span class="rounded-full bg-stone-300 flex-shrink-0" style="width: 3px; height: 3px;"></span>
+        </div>
+
+          <div class="text-center w-full pb-2">
+            <span class="text-sm text-stone-400 italic font-serif tracking-widest">
+              Created in <span class="roman-date mx-1" data-year="{{ post.date | date: '%Y' }}" data-month="{{ post.date | date: '%m' }}" data-day="{{ post.date | date: '%d' }}"></span>
+            </span>
+          </div>
 
         </div>
       </div>

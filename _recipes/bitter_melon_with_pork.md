@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "苦瓜酿肉"
 title_en: "Bitter Melon Stuffed with Pork"
+date: 2026-03-05
 image: Bitter_melon_with_pork.png
 
 tags:
@@ -12,7 +13,7 @@ ingredients:
 - zh: "蘑菇"
   en: "Mushrooms"
 - zh: "肉末"
-  en: "Minced Meat (Pork)"
+  en: "Ground Meat"
 - zh: "苦瓜"
   en: "Bitter Melon"
 - zh: "豆豉"

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "九层塔焖牛肉"
 title_en: "Basil Braised Beef"
+date: 2026-05-20
 image: Basil_beef.png
 
 tags:

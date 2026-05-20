@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "泡椒牛肉"
 title_en: "Beef with Pickled Peppers"
+date: 2026-03-08
 image: Beef_with_pickled_peppers.png
 
 tags:

@@ -2,6 +2,7 @@
 layout: recipe
 title_zh: "洋葱鸡肉滑蛋饭"
 title_en: "Onion Chicken Scrambled Egg Rice"
+date: 2025-11-05
 image: egg_with_chicken.png
 
 tags:
