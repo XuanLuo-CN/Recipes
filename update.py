@@ -169,45 +169,54 @@ def sync_to_about():
         print(f"❌ 错误：未找到 {ABOUT_PATH}")
         return
 
-    # 1. 准备新内容
+    # 获取 README 内容并包裹 HTML 样式
     readme_content = ""
     if os.path.exists(README_PATH):
         with open(README_PATH, 'r', encoding='utf-8') as f:
             raw_readme = f.read().strip()
+            
+            # --- 核心修复：自动剥离 README 顶部的 Front Matter ---
             if raw_readme.startswith('---'):
                 parts = raw_readme.split('---', 2)
-                if len(parts) >= 3: raw_readme = parts[2].strip()
-            readme_content = f'\n  <div class="prose max-w-3xl mx-auto mb-16" markdown="1">\n\n{raw_readme}\n\n  </div>\n'
-    
+                if len(parts) >= 3:
+                    # 只保留第三个部分（也就是真正的正文）
+                    raw_readme = parts[2].strip()
+            # ----------------------------------------------------
+            
+            readme_content = f'  \n  <div class="prose max-w-3xl mx-auto mb-16" markdown="1">\n\n{raw_readme}\n\n  </div>\n'
+    else:
+        print(f"⚠️ 警告：未找到 {README_PATH}")
+
+    # 获取 CHANGELOG HTML
     changelog_html = generate_html_from_changelog()
-    new_data = f"\n{readme_content}\n{changelog_html}\n"
 
-    # 2. 读取当前文件
+    # 将两部分内容无缝拼接
+    final_content = f"\n{readme_content}\n{changelog_html}\n"
+
+    # 读取 about.md
     with open(ABOUT_PATH, 'r', encoding='utf-8') as f:
-        content = f.read()
+        about_text = f.read()
 
-    # 3. 使用正则直接“切开”文件，不再依赖 .split() 的精确字符串匹配
-    # 这会匹配所有的 HTML 注释，即使中间有空格或换行
-    pattern = r"()(.*?)()"
-    
-    if not re.search(pattern, content, re.DOTALL):
-        print("⚠️ 警告：未找到锚点标记，请检查 about.md 是否包含 和 END 标签。")
-        return
+    # 寻找匹配锚点
+    start_pattern = r''
+    end_pattern = r''
 
-    # 4. 重新组装内容
-    # 使用 re.sub 进行替换，确保只保留锚点外围的骨架
-    final_content = re.sub(
-        pattern, 
-        r"\1" + new_data + r"\3", 
-        content, 
-        flags=re.DOTALL | re.IGNORECASE
-    )
+    match_start = re.search(start_pattern, about_text, re.IGNORECASE)
+    match_end = re.search(end_pattern, about_text, re.IGNORECASE)
 
-    # 5. 写入
-    with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
-        f.write(final_content)
-    
-    print("✅ 同步完成！已使用正则重置锚点内容，完美解决拼接错误。")
+    if match_start and match_end and match_start.end() <= match_end.start():
+        header = about_text[:match_start.end()]
+        footer = about_text[match_end.start():]
+        new_about_text = f"{header}{final_content}{footer}"
+
+        if about_text.strip() != new_about_text.strip():
+            with open(ABOUT_PATH, 'w', encoding='utf-8') as f:
+                f.write(new_about_text)
+            print("⚡ 检测到内容更新，已成功将剥离后的 README 和 CHANGELOG 联合注入到 about.md！")
+        else:
+            print("✅ 检查完毕：about.md 内容已是最新，无需同步。")
+    else:
+        print("⚠️ 警告：在 about.md 中未找到标准的 ABOUT_CONTENT_START 和 END 锚点标记，注入终止。")
 
 if __name__ == '__main__':
     print("=== Xuan's Recipes 自动化维护助手 ===")
