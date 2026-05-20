@@ -182,9 +182,13 @@ def sync_to_about():
     with open(ABOUT_PATH, 'r', encoding='utf-8') as f:
         about_text = f.read()
 
-    # 寻找匹配锚点
-    start_pattern = r''
-    end_pattern = r''
+# 寻找匹配锚点
+    # 💡【在这里修改】：把空字符串改成明确的 html 标签标记
+    start_pattern = r'<div id="about-content-start"></div>'
+    end_pattern = r'<div id="about-content-end"></div>'
+
+    match_start = re.search(start_pattern, about_text, re.IGNORECASE)
+    match_end = re.search(end_pattern, about_text, re.IGNORECASE)
 
     match_start = re.search(start_pattern, about_text, re.IGNORECASE)
     match_end = re.search(end_pattern, about_text, re.IGNORECASE)
