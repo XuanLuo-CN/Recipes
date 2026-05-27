@@ -34,10 +34,6 @@ permalink: /tags/
             </div>
             
             <div id="tag-container" class="flex flex-wrap gap-2 w-full">
-              <button data-tag="all" class="tag-btn px-2.5 py-0.5 bg-primary text-white border border-primary rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5">
-                All Recipes
-              </button>
-
               {% assign all_tags = "" | split: "," %}
               {% for post in site.recipes %}
                 {% for tag_obj in post.tags %}
@@ -214,43 +210,48 @@ permalink: /tags/
     const cards = Array.from(grid.getElementsByClassName('recipe-card'));
     const tagBtns = document.querySelectorAll('.tag-btn');
 
-    // 处理 Tag 点击筛选功能
+    const inactiveClass = "tag-btn px-2.5 py-0.5 bg-stone-100/80 hover:bg-stone-200/80 text-stone-600 border border-stone-200/40 rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
+    const activeClass   = "tag-btn px-2.5 py-0.5 bg-primary text-white border border-primary rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
+
+    let activeTag = null;
+
+    function resetButtons() {
+      tagBtns.forEach(b => {
+        b.className = inactiveClass;
+        const s1 = b.querySelector('span:nth-child(1)');
+        const s2 = b.querySelector('span:nth-child(2)');
+        const s3 = b.querySelector('span:nth-child(3)');
+        if (s1) s1.className = "text-stone-400 font-normal";
+        if (s2) s2.className = "text-stone-300/60 select-none";
+        if (s3) s3.className = "text-stone-600 font-semibold";
+      });
+    }
+
     tagBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // 1. 让所有按钮恢复成未选中的灰底状态
-        tagBtns.forEach(b => {
-          b.className = "tag-btn px-2.5 py-0.5 bg-stone-100/80 hover:bg-stone-200/80 text-stone-600 border border-stone-200/40 rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
-          
-          // 如果是生成的 Tag 按钮，需要重置内部 span 的颜色
-          const spanEn = b.querySelector('.text-stone-100\\/70');
-          const spanDivider = b.querySelector('.text-white\\/40');
-          const spanZh = b.querySelector('.text-white');
-          if(spanEn) spanEn.className = "text-stone-400 font-normal";
-          if(spanDivider) spanDivider.className = "text-stone-300/60 select-none";
-          if(spanZh) spanZh.className = "text-stone-600 font-semibold";
-        });
-        
-        // 2. 让当前点击的按钮变成红色选中状态
-        btn.className = "tag-btn px-2.5 py-0.5 bg-primary text-white border border-primary rounded-md text-xs font-medium transition-colors duration-150 tracking-wide cursor-pointer flex items-center gap-1.5";
-        
-        // 修改当前选中的 Tag 按钮内部文字颜色为白色
-        const activeSpanEn = btn.querySelector('span:nth-child(1)');
-        const activeSpanDivider = btn.querySelector('span:nth-child(2)');
-        const activeSpanZh = btn.querySelector('span:nth-child(3)');
-        if (activeSpanEn) activeSpanEn.className = "text-stone-100/70 font-normal";
-        if (activeSpanDivider) activeSpanDivider.className = "text-white/40 select-none";
-        if (activeSpanZh) activeSpanZh.className = "text-white font-semibold";
+        const tag = btn.dataset.tag;
 
+        // 再次点击已选中的 tag → 取消选中，恢复显示全部
+        if (activeTag === tag) {
+          activeTag = null;
+          resetButtons();
+          cards.forEach(c => c.style.display = 'block');
+          return;
+        }
 
-        // 3. 执行菜品筛选
-        const selectedTag = btn.dataset.tag;
+        activeTag = tag;
+        resetButtons();
+        btn.className = activeClass;
+        const s1 = btn.querySelector('span:nth-child(1)');
+        const s2 = btn.querySelector('span:nth-child(2)');
+        const s3 = btn.querySelector('span:nth-child(3)');
+        if (s1) s1.className = "text-stone-100/70 font-normal";
+        if (s2) s2.className = "text-white/40 select-none";
+        if (s3) s3.className = "text-white font-semibold";
+
         cards.forEach(card => {
           const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
-          if (selectedTag === 'all' || cardTags.includes(selectedTag)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
+          card.style.display = cardTags.includes(tag) ? 'block' : 'none';
         });
       });
     });

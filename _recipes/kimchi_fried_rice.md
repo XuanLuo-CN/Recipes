@@ -6,8 +6,8 @@ date: 2026-05-22
 image: "kimchi_fried_rice.png"
 
 tags:
-- zh: "主食"
-  en: "Staple"
+- zh: "猪肉"
+  en: "Pork"
 
 ingredients:
 - zh: "酸泡菜"

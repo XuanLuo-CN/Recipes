@@ -1,43 +1,44 @@
+欢迎来到Xuan的数字菜谱！这是一个高效录入、自动化设计和补全的个人菜谱网页。
 
-欢迎来到Xuan的数字菜谱！这是一个专为高效录入、精致展示而设计的现代化个人菜谱微型系统。
+*Welcome to Xuan's digital recipe book — a personal recipe site built for fast entry, automated design, and AI-powered completion.*
 
+---
+
+### 自定义增强功能 / Enhanced Features
+
+- **自动计数**：全站菜谱数量、分类标签实时统计一目了然。
+  *Live Count: Recipe and tag totals computed and displayed in real time.*
+- **智能排序**：支持多维度排序，快速找到你想做的那道菜。
+  *Smart Sort: Sort by date, Chinese title, or English title in one click.*
+- **精致排版**：针对中文字体与中英混排进行了深度视觉优化。
+  *Fine Typography: Deep visual tuning for Chinese fonts and bilingual layout.*
+- **便捷浮窗**：点击菜品直接弹出详细信息，无需切换页面。
+  *Quick Preview: Click any recipe to open a modal — no page reload needed.*
 
 ---
 
-### 自定义增强功能
-在原本极简的 Chowdown 模板基础上，我深度定制了以下功能：
+### 怎么加一道新菜 / Adding a Recipe
 
-*   **自动计数**：全站菜谱数量、分类标签实时统计一目了然。
-*   **智能排序**：支持多维度排序，快速捞出你想做的那道菜。
-*   **精致排版**：针对中文字体、中英文混排以及烹饪步骤的间距进行了深度视觉优化。
-*   **便捷浮窗**：在主页点击菜品直接弹出精致的高性能浮窗展示详细信息，无需频繁切换和刷新页面。
-
----
-###  怎么加一道新菜
 本站最大的特色在于其**近乎零成本的录入体验**。当我想记录一道新菜时：
+
+*The standout feature is its **near-zero-effort entry workflow**. When I want to record a new dish:*
+
 1. 我只需输入**菜品做法步骤**。
-2. 系统会自动调用 **Google Gemini** 进行全自动填充以下内容：
-	1. **原料提取**：自动规范化生成精确的原料表。
-	2. **自动归类**：智能分析并打上跨维度的标签。
-	3. **视觉生成**：自动为这道菜量身定制并渲染出一张精美的插图。
+   *I only type the **cooking steps**.*
+2. 系统自动调用 **Google Gemini** 补全原料表、分类标签和配图。
+   ***Google Gemini** auto-fills ingredients, tags, and a generated image.*
 
-真正实现了“我只管做菜和记录，剩下的排版和设计全部交给 AI”。
+「我只管做菜，剩下的全部交给 AI。」
 
-----
+*"I just cook and write — the AI handles the rest."*
 
-###  技术栈
-Framework: Jekyll (Ruby)
+---
 
-Theme: Chowdown (Modified)
+### 技术栈 / Tech Stack
 
-AI Engine: Google Gemini (Flash / Pro)
-
-本地编译工具
-* Environment: `Ruby & Bundler`
-* CSS Compiler: `Tailwind CSS CLI`
-
-编译流程与命令
-1. 启动本地监听与热更新编译：
-```bash
-bundle exec jekyll serve --livereload
-npx tailwindcss -i ./css/main.css -o ./css/compiled.css --watch
+| | 中文 | English |
+|---|---|---|
+| 框架 / Framework | Jekyll (Ruby) | Jekyll (Ruby) |
+| 主题 / Theme | Chowdown（深度魔改） | Chowdown (Modified) |
+| AI 引擎 / AI Engine | Google Gemini Flash / Pro | Google Gemini Flash / Pro |
+| 本地编译 / Local Build | `bundle exec jekyll serve --livereload` | `bundle exec jekyll serve --livereload` |
