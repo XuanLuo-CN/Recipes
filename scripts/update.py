@@ -65,7 +65,7 @@ def complete_new_recipes():
     print(f"\n 3. 发现 {len(new_files)} 个新菜谱，开始调用 complete_recipes.py 补全...")
     sys.stdout.flush()
     result = subprocess.run(
-        [sys.executable, "complete_recipes.py"],
+        [sys.executable, os.path.join(os.path.dirname(__file__), "complete_recipes.py")],
         capture_output=False
     )
     if result.returncode != 0:
