@@ -8,8 +8,6 @@ image: "italian_tuna.png"
 tags:
 - zh: "海鲜"
   en: "Seafood"
-- zh: "西餐"
-  en: "Western"
 
 ingredients:
 - zh: "金枪鱼"

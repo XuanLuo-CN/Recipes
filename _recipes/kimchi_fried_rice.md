@@ -6,8 +6,6 @@ date: 2026-05-22
 image: "kimchi_fried_rice.png"
 
 tags:
-- zh: "韩料"
-  en: "Korean"
 - zh: "主食"
   en: "Staple"
 

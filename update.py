@@ -1,5 +1,9 @@
 import os
 import re
+import subprocess
+import sys
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 # ================= 配置路径 =================
 RECIPES_DIR = './_recipes'
@@ -208,8 +212,69 @@ def sync_to_about():
         print("⚠️ 警告：在 about.md 中未找到标准的 ABOUT_CONTENT_START 和 END 锚点标记，注入终止。")
 
 
+def get_new_recipes():
+    result = subprocess.run(
+        ["git", "status", "--porcelain", RECIPES_DIR],
+        capture_output=True, text=True, encoding="utf-8"
+    )
+    files = []
+    for line in result.stdout.strip().splitlines():
+        if not line.strip():
+            continue
+        status = line[:2].strip()
+        path = line[3:].strip().strip('"')
+        if path.endswith(".md") and status in ("??", "A"):
+            files.append(path)
+    return files
+
+
+def complete_new_recipes():
+    new_files = get_new_recipes()
+    if not new_files:
+        print("\n 3. 没有新菜谱需要补全。")
+        return False
+
+    print(f"\n 3. 发现 {len(new_files)} 个新菜谱，开始调用 complete_recipes.py 补全...")
+    sys.stdout.flush()
+    result = subprocess.run(
+        [sys.executable, "complete_recipes.py"],
+        capture_output=False
+    )
+    if result.returncode != 0:
+        print("❌ complete_recipes.py 执行失败，终止 push。")
+        return False
+    return True
+
+
+def git_push():
+    print("\n 4. 开始自动 git add / commit / push...")
+    sys.stdout.flush()
+
+    new_files = get_new_recipes()
+    if not new_files:
+        print("   没有需要提交的新菜谱。")
+        return
+
+    for f in new_files:
+        subprocess.run(["git", "add", f], check=True)
+        print(f"   git add: {f}")
+
+    titles = []
+    for f in new_files:
+        name = os.path.splitext(os.path.basename(f))[0]
+        titles.append(name)
+    commit_msg = "Add recipes: " + ", ".join(titles)
+
+    subprocess.run(["git", "commit", "-m", commit_msg], check=True)
+    subprocess.run(["git", "push"], check=True)
+    print("   Push 完成！")
+
+
 if __name__ == '__main__':
     print("=== Xuan's Recipes 自动化维护助手 ===")
     check_missing_images()
     sync_to_about()
+    has_new = complete_new_recipes()
+    if has_new:
+        git_push()
     print("====================================")

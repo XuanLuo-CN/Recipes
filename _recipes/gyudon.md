@@ -8,8 +8,6 @@ image: "gyudon.png"
 tags:
 - zh: "牛肉"
   en: "Beef"
-- zh: "日料"
-  en: "Japanese"
 
 ingredients:
 - zh: "鸡蛋"
