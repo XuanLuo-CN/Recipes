@@ -7,7 +7,7 @@ image: Chives_and_bean_sprouts.png
 
 tags:
 - en: Vege
-  zh: "素食"
+  zh: "素菜"
 
 ingredients:
 - zh: "韭菜"
