@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /recipes.json
 ---
 {% assign counter = 1 %}
 {% assign total = site.recipes | size %}
